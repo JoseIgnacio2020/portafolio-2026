@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Desarrollo Web Profesional para Pymes en Chile. Creación de Landing Pages, Sitios Estáticos y Sistemas web a medida.">
+    <meta name="keywords"
+        content="Desarrollo Web, Pymes, Chile, Landing Pages, Sitios Estáticos, Sistemas PHP MySQL, Bootstrap 5">
+    <meta name="author" content="José Ignacio - Desarrollador Web Full Stack Senior">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="José Ignacio - Desarrollador Web Full Stack Senior">
+    <meta property="og:description"
+        content="Impulsa tu Pyme en Chile con soluciones web modernas y a medida. Landing Pages y Sistemas web optimizados.">
+    <!-- El placeholder de la imagen deberías cambiarlo por una captura en ./assets/img/ -->
+    <meta property="og:image"
+        content="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80">
+    <meta property="og:url" content="https://tu-dominio.cl">
+    <meta property="og:type" content="website">
+
+    <title>Portafolio | Desarrollador Web Full Stack Senior</title>
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5 CSS (Local Vendor) -->
+    <link href="./assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons via CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Devicon Icons via CDN -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+    <!-- Custom CSS -->
+    <link href="./css/style.css" rel="stylesheet">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navbar-main" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true"
+    tabindex="0">
+
+    <!-- Header / Navbar -->
+    <header>
+        <nav id="navbar-main" class="navbar navbar-expand-lg fixed-top shadow-sm" data-bs-theme="dark">
+            <div class="container">
+                <a class="navbar-brand fw-bold text-primary" href="#inicio">&lt;Dev/&gt;</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav fw-medium gap-lg-3">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#inicio">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#proyectos">Proyectos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#testimonios">Testimonios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#servicios">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#tecnologias">Tecnologías</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contacto">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="inicio" class="hero-gradient position-relative">
+            <div class="container">
+                <div class="row align-items-center min-vh-100">
+                    <div class="col-lg-6 mb-5 mb-lg-0 text-center text-lg-start pt-5 pt-lg-0">
+                        <span
+                            class="badge text-bg-primary bg-opacity-10 text-primary border border-primary mb-3 px-3 py-2 rounded-pill">
+                            Desarrollo
+                            Web Profesional
+                        </span>
+                        <h1 class="display-4 fw-bold mb-4 text-white">Impulsamos tu <span class="text-primary">Pyme en
+                                Chile</span>
+                            con 14 años de experiencia en tecnología</h1>
+                        <p class="lead text-secondary mb-5">Analista Programador experto en soluciones Full Stack. He
+                            trabajado en proyectos para el sector público, privado y
+                            telecomunicaciones.</p>
+                        <div
+                            class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start">
+                            <a href="#proyectos" class="btn btn-primary btn-lg px-4 gap-3 rounded-pill">Ver Proyectos <i
+                                    class="bi bi-arrow-right"></i></a>
+                            <a href="#servicios" class="btn btn-outline-light btn-lg px-4 rounded-pill">Nuestros
+                                Servicios</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 text-center">
+                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80"
+                            alt="Código y Desarrollo Web"
+                            class="img-fluid rounded-4 shadow-lg border border-secondary border-opacity-25" width="800"
+                            height="533" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Proyectos Section -->
+        <section id="proyectos" class="bg-body-secondary bg-opacity-10">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold display-6">Proyectos Destacados</h2>
+                    <p class="text-secondary col-md-8 mx-auto">Conoce cómo ayudamos a transformar la presencia digital y
+                        acelerar las ventas de nuestros clientes.</p>
+                </div>
+
+                <div class="row justify-content-center g-4">
+                    <!-- Proyecto 1: Metrelex -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <article class="card h-100 rounded-4 overflow-hidden shadow">
+
+                            <div class="card-img-container p-3"
+                                style="background-color: #ffffff; height: 220px; display: flex; align-items: center; justify-content: center;">
+                                <img src="assets/img/logo-Metrelex.png" alt="Logo Metrelex" class="img-fluid"
+                                    style="max-height: 100%; object-fit: contain;">
+                            </div>
+
+                            <!-- Parte Media (Contenido) -->
+                            <div class="card-body p-4 d-flex flex-column text-center">
+                                <div class="mb-3">
+                                    <span class="badge bg-primary px-3 py-2 rounded-pill">Sitio Web Corporativo</span>
+                                </div>
+                                <h3 class="card-title h4 fw-bold text-white mb-3">Metrelex</h3>
+                                <p class="card-text text-white mb-4 flex-grow-1">Diseño responsivo con conectividad
+                                    WhatsApp y formulario seguro.</p>
+
+                                <!-- Parte Inferior (Footer de Card) -->
+                                <div class="mb-4">
+                                    <small class="text-secondary fw-medium"><i
+                                            class="bi bi-code-slash text-primary me-1"></i> HTML5, CSS3, JavaScript,
+                                        EmailJS, GitHub y Netlify.</small>
+                                </div>
+                                <div class="mt-auto">
+                                    <a href="https://metrelex.cl"
+                                        class="btn btn-primary rounded-pill btn-hover-elevate px-4 w-100"
+                                        target="_blank" rel="noopener noreferrer">
+                                        Ver Sitio <i class="bi bi-box-arrow-up-right ms-2"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonios Section -->
+        <section id="testimonios">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold display-6">Casos de Éxito</h2>
+                    <p class="text-secondary col-md-8 mx-auto">Lo que dicen nuestros clientes sobre el resultado de
+                        nuestro trabajo.</p>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-md-10 col-lg-8">
+                        <!-- Estructura wrappper: lista para convertirse en carrusel en el futuro -->
+                        <div class="testimonial-wrapper">
+                            <article class="testimonial-card-gradient p-4 p-md-5 text-center shadow">
+                                <i class="bi bi-quote display-3 text-primary opacity-25 mb-2 d-inline-block"></i>
+                                <p class="lead fst-italic mb-4 text-secondary lh-base px-md-3">
+                                    "Contratamos a José Ignacio para el desarrollo de nuestro sitio corporativo y el
+                                    resultado superó las expectativas. La web es totalmente responsiva y se ve impecable
+                                    en celulares, lo que era clave para nosotros. Además, la integración del botón de
+                                    WhatsApp y el formulario de contacto seguro al correo de la empresa nos ha
+                                    facilitado mucho la comunicación directa con nuevos clientes. Un trabajo técnico de
+                                    gran nivel y muy confiable."
+                                </p>
+                                <div class="d-flex justify-content-center gap-1 mb-3">
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                </div>
+                                <h3 class="h5 fw-bold mb-1 text-white">Alex Muñoz</h3>
+                                <p class="small text-primary mb-0 fw-medium">fundador de Metrelex</p>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Servicios Section -->
+        <section id="servicios">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold display-6">Nuestros Servicios</h2>
+                    <p class="text-secondary col-md-8 mx-auto">Soluciones IT rentables y escalables, diseñadas para
+                        potenciar el crecimiento y la eficiencia operativa de tu empresa.</p>
+                </div>
+
+                <div class="row g-4 justify-content-center">
+                    <!-- Servicio 1: Sitios Corporativos y E-commerce Escalable -->
+                    <div class="col-md-6">
+                        <div
+                            class="card h-100 p-4 p-lg-5 rounded-4 text-center border border-secondary border-opacity-10">
+                            <i class="bi bi-rocket-takeoff service-icon"></i>
+                            <h3 class="h4 fw-bold mb-3 text-white">Sitios Corporativos y E-commerce Escalable</h3>
+                            <p class="text-white mb-0">Desarrollo de ecosistemas web profesionales, desde Landing Pages
+                                de alto impacto hasta sitios corporativos multi-página. Diseñamos estructuras preparadas
+                                para el crecimiento de tu negocio, con catálogos digitales optimizados y arquitectura
+                                lista para la integración futura de plataformas de pago electrónico.</p>
+                        </div>
+                    </div>
+
+                    <!-- Servicio 2: Automatización y Sistemas a Medida -->
+                    <div class="col-md-6">
+                        <div
+                            class="card h-100 p-4 p-lg-5 rounded-4 text-center border border-secondary border-opacity-10">
+                            <i class="bi bi-server service-icon"></i>
+                            <h3 class="h4 fw-bold mb-3 text-white">Automatización y Sistemas a Medida</h3>
+                            <p class="text-white mb-0">Transformamos procesos manuales en soluciones digitales
+                                eficientes. Desarrollamos la lógica de negocio detrás de tu sitio: desde paneles de
+                                administración personalizados hasta intranets robustas para la gestión interna de datos.
+                                Construimos herramientas que garantizan la integridad de tu información y la
+                                escalabilidad técnica de tu empresa.</p>
+                        </div>
+                    </div>
+
+                    <!-- Servicio 3: Estrategia Digital y Visibilidad (SEO) -->
+                    <div class="col-md-6">
+                        <div
+                            class="card h-100 p-4 p-lg-5 rounded-4 text-center border border-secondary border-opacity-10">
+                            <i class="bi bi-graph-up service-icon"></i>
+                            <h3 class="h4 fw-bold mb-3 text-white">Estrategia Digital y Visibilidad (SEO)</h3>
+                            <p class="text-white mb-0">Hacemos que tu negocio sea encontrado por los clientes
+                                correctos. Implementamos estrategias de SEO técnico, indexación profesional en Google y
+                                configuración de analítica avanzada para medir el retorno de tu inversión en tiempo
+                                real. No solo creamos tu sitio, lo posicionamos para que trabaje por ti.</p>
+                        </div>
+                    </div>
+
+                    <!-- Servicio 4: Infraestructura, Seguridad y Continuidad -->
+                    <div class="col-md-6">
+                        <div
+                            class="card h-100 p-4 p-lg-5 rounded-4 text-center border border-secondary border-opacity-10">
+                            <i class="bi bi-shield-lock service-icon"></i>
+                            <h3 class="h4 fw-bold mb-3 text-white">Infraestructura, Seguridad y Continuidad</h3>
+                            <p class="text-white mb-0">Protegemos tu activo digital más valioso. Implementamos
+                                protocolos de seguridad integral que incluyen protección contra spam (reCAPTCHA),
+                                validación avanzada de datos en formularios y gestión profesional de servidores
+                                (SSL/DNS). Aseguramos que tu plataforma esté siempre en línea, segura y lista para
+                                operar bajo cualquier demanda técnica.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-5 pt-3">
+                    <p class="text-light fw-medium d-inline-block px-4 py-3 rounded-pill border border-secondary border-opacity-25"
+                        style="background-color: rgba(16, 185, 129, 0.05);">
+                        <i class="bi bi-info-circle text-primary me-2"></i> Asesoría en la elección de hosting y
+                        dominios .cl / .com para optimizar costos de tu empresa.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tecnologías Section -->
+        <section id="tecnologias">
+            <div class="container overflow-hidden">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold display-6">Tecnologías y Herramientas</h2>
+                    <p class="text-secondary col-md-8 mx-auto">Un stack sólido y moderno para soluciones escalables.</p>
+                </div>
+
+                <div class="marquee-container mt-4">
+                    <div class="marquee-content d-flex align-items-center">
+                        <!-- Grupo 1 -->
+                        <i class="devicon-html5-plain colored tech-icon" title="HTML5"></i>
+                        <i class="devicon-css3-plain colored tech-icon" title="CSS3"></i>
+                        <i class="devicon-javascript-plain colored tech-icon" title="JavaScript"></i>
+                        <i class="devicon-jquery-plain colored tech-icon" title="jQuery"></i>
+                        <i class="devicon-bootstrap-plain colored tech-icon" title="Bootstrap"></i>
+                        <i class="devicon-angularjs-plain colored tech-icon" title="Angular"></i>
+                        <i class="devicon-php-plain colored tech-icon" title="PHP"></i>
+                        <i class="devicon-codeigniter-plain colored tech-icon" title="CodeIgniter"></i>
+                        <i class="devicon-laravel-original colored tech-icon" title="Laravel"></i>
+                        <i class="devicon-mysql-plain colored tech-icon" title="MySQL"></i>
+                        <i class="devicon-postgresql-plain colored tech-icon" title="PostgreSQL"></i>
+                        <i class="devicon-oracle-original colored tech-icon" title="Oracle"></i>
+                        <i class="devicon-git-plain colored tech-icon" title="Git"></i>
+                        <i class="devicon-docker-plain colored tech-icon" title="Docker"></i>
+                        <i class="devicon-azure-plain colored tech-icon" title="Azure"></i>
+                        <i class="devicon-netlify-plain colored tech-icon" title="Netlify"></i>
+
+                        <!-- Grupo 2 (Copia Exacta para Scroll Infinito) -->
+                        <i class="devicon-html5-plain colored tech-icon" title="HTML5"></i>
+                        <i class="devicon-css3-plain colored tech-icon" title="CSS3"></i>
+                        <i class="devicon-javascript-plain colored tech-icon" title="JavaScript"></i>
+                        <i class="devicon-jquery-plain colored tech-icon" title="jQuery"></i>
+                        <i class="devicon-bootstrap-plain colored tech-icon" title="Bootstrap"></i>
+                        <i class="devicon-angularjs-plain colored tech-icon" title="Angular"></i>
+                        <i class="devicon-php-plain colored tech-icon" title="PHP"></i>
+                        <i class="devicon-codeigniter-plain colored tech-icon" title="CodeIgniter"></i>
+                        <i class="devicon-laravel-original colored tech-icon" title="Laravel"></i>
+                        <i class="devicon-mysql-plain colored tech-icon" title="MySQL"></i>
+                        <i class="devicon-postgresql-plain colored tech-icon" title="PostgreSQL"></i>
+                        <i class="devicon-oracle-original colored tech-icon" title="Oracle"></i>
+                        <i class="devicon-git-plain colored tech-icon" title="Git"></i>
+                        <i class="devicon-docker-plain colored tech-icon" title="Docker"></i>
+                        <i class="devicon-azure-plain colored tech-icon" title="Azure"></i>
+                        <i class="devicon-netlify-plain colored tech-icon" title="Netlify"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contacto Section -->
+        <section id="contacto">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold display-6">Contáctame</h2>
+                    <p class="text-secondary col-md-8 mx-auto">¿Tienes un proyecto en mente? Escríbeme y hablemos de
+                        cómo puedo ayudarte.</p>
+                </div>
+
+                <div class="row align-items-center justify-content-center g-5">
+                    <div class="col-lg-4 text-center text-lg-start">
+                        <div class="mb-4">
+                            <i class="bi bi-geo-alt-fill text-primary" style="font-size: 2rem;"></i>
+                            <h3 class="h5 fw-bold mt-2">Ubicación</h3>
+                            <p class="text-secondary mb-0">Santiago, Región Metropolitana (RM)<br>Chile</p>
+                        </div>
+                        <div class="mb-4">
+                            <i class="bi bi-linkedin text-primary" style="font-size: 2rem;"></i>
+                            <h3 class="h5 fw-bold mt-2">LinkedIn</h3>
+                            <p class="text-secondary mb-0">También estoy disponible para conectar y charlar en <a
+                                    href="https://www.linkedin.com/in/jose-ignacio-silva-inestrosa/" target="_blank"
+                                    class="text-primary text-decoration-none fw-medium">mi perfil de LinkedIn</a>.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-8">
+                        <div class="card p-4 p-md-5 rounded-4 border-0 shadow">
+                            <form id="contact-form" class="needs-validation" novalidate>
+                                <div class="row g-3">
+                                    <div class="col-12">
+                                        <label for="name" class="form-label fw-medium">Nombre Completo</label>
+                                        <input type="text" class="form-control" id="name" name="name" required
+                                            minlength="3" placeholder="Ej: José Ignacio Silva">
+                                        <div class="invalid-feedback">Por favor ingresa tu nombre completo.</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="email" class="form-label fw-medium">Correo Electrónico</label>
+                                        <input type="email" class="form-control" id="email" name="email"
+                                            placeholder="Ej: jose@gmail.com" required>
+                                        <div class="invalid-feedback">Por favor ingresa un correo electrónico válido.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="phone" class="form-label fw-medium">Teléfono (Opcional)</label>
+                                        <input type="tel" class="form-control" id="phone" name="phone"
+                                            placeholder="Ej: 912345678" pattern="[0-9]{9}">
+                                        <div class="invalid-feedback">El teléfono debe tener 9 dígitos numéricos (Ej:
+                                            912345678).</div>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="message" class="form-label fw-medium">Mensaje</label>
+                                        <textarea class="form-control" id="message" name="message" rows="4" required
+                                            minlength="10"></textarea>
+                                        <div class="invalid-feedback">Por favor ingresa tu mensaje (mínimo 10
+                                            caracteres).</div>
+                                    </div>
+                                    <!-- reCAPTCHA v2 -->
+                                    <div class="col-12 d-flex justify-content-center justify-content-lg-start mt-3">
+                                        <div class="g-recaptcha" data-sitekey="6LfSAaUsAAAAAI9cNbC4s_gw18Q1cpOz8bnC5kc4"
+                                            data-theme="dark"></div>
+                                    </div>
+                                    <div class="col-12 mt-4 text-center text-lg-start">
+                                        <button type="submit"
+                                            class="btn btn-primary rounded-pill px-5 py-2 fw-medium btn-hover-elevate w-100"
+                                            id="btn-submit">
+                                            Enviar Mensaje <i class="bi bi-send ms-2"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+
+                            <!-- Alertas de Envío -->
+                            <div id="form-message-sending" class="alert alert-info d-none mt-4 rounded-3 border-0"
+                                role="alert">
+                                <i class="bi bi-hourglass-split me-2"></i> Enviando...
+                            </div>
+                            <div id="form-message-success" class="alert d-none mt-4 rounded-3 border-0"
+                                style="background-color: rgba(16, 185, 129, 0.1); color: #10b981;" role="alert">
+                                <i class="bi bi-check-circle-fill me-2"></i> ¡Mensaje enviado exitosamente! Te
+                                contactaré a la brevedad.
+                            </div>
+                            <div id="form-message-error" class="alert alert-danger d-none mt-4 rounded-3 border-0"
+                                role="alert">
+                                <i class="bi bi-exclamation-triangle-fill me-2"></i> Ocurrió un error al enviar. Por
+                                favor intenta nuevamente o marca la casilla de seguridad.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-body-secondary bg-opacity-25 py-5 border-top border-secondary border-opacity-10">
+        <div class="container text-center">
+            <h2 class="h3 fw-bold mb-4">¿Listo para escalar tu negocio?</h2>
+            <p class="text-secondary mb-4">Contáctanos por WhatsApp y recibe una asesoría gratuita hoy mismo.</p>
+
+            <div class="d-flex justify-content-center gap-4 my-4">
+                <a href="https://www.linkedin.com/in/jose-ignacio-silva-inestrosa/" target="_blank"
+                    rel="noopener noreferrer" class="social-icon-link" aria-label="LinkedIn">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+                <a href="https://github.com/JoseIgnacio2020" target="_blank" rel="noopener noreferrer"
+                    class="social-icon-link" aria-label="GitHub">
+                    <i class="bi bi-github"></i>
+                </a>
+            </div>
+            <div class="pt-4 mt-5 border-top border-secondary border-opacity-25">
+                <p class="text-secondary small mb-0">&copy; <span id="year"></span> José Ignacio - Desarrollador
+                    Web Full Stack Senior. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón Flotante WhatsApp -->
+    <a href="https://wa.me/56974340975?text=Hola!%20Vi%20tu%20portafolio%20y%20me%20gustaría%20cotizar%20un%20sitio%20web"
+        class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <!-- Bootstrap 5 JS (Local Vendor) -->
+    <script src="./assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Google reCAPTCHA v2 API -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <!-- Custom JS -->
+    <script type="module" src="./js/main.js"></script>
+</body>
+
+</html>

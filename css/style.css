@@ -1,0 +1,293 @@
+:root {
+    /* Emerald Accents */
+    --bs-primary: #10b981; 
+    --bs-primary-rgb: 16, 185, 129;
+    /* Slate Dark Background */
+    --bs-body-bg: #0f172a; 
+    --bs-body-color: #f8fafc;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bs-body-bg);
+    color: #ffffff;
+}
+
+p, h1, h2, h3, h4, h5, h6, span {
+    color: #ffffff;
+}
+
+/* Override text-secondary para asegurar legibilidad altísima */
+.text-secondary {
+    color: #f8fafc !important;
+}
+
+/* Smooth scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+    color: #fff;
+}
+.btn-primary:hover {
+    background-color: #059669;
+    border-color: #059669;
+}
+
+.btn-outline-primary {
+    color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+.btn-outline-primary:hover {
+    background-color: var(--bs-primary);
+    color: white;
+}
+
+.btn-hover-elevate {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-hover-elevate:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+}
+
+.text-primary,
+.icon-primary {
+    color: var(--bs-primary) !important;
+}
+
+.bg-primary {
+    background-color: var(--bs-primary) !important;
+}
+
+.border-primary {
+    border-color: var(--bs-primary) !important;
+}
+
+/* Navbar */
+.navbar {
+    backdrop-filter: blur(10px);
+    background-color: rgba(15, 23, 42, 0.8) !important;
+    transition: background-color 0.3s ease;
+}
+
+.navbar.scrolled {
+    background-color: rgba(15, 23, 42, 0.95) !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Hero Section */
+#inicio {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-gradient {
+    background: linear-gradient(135deg, rgba(16,185,129,0.1) 0%, rgba(15,23,42,0) 100%);
+}
+
+/* Cards */
+.card {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(16, 185, 129, 0.2);
+    border-color: var(--bs-primary);
+}
+
+.service-icon {
+    font-size: 2.5rem;
+    color: var(--bs-primary);
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.card:hover .service-icon {
+    transform: scale(1.1);
+}
+
+/* WhatsApp Float Button */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    color: #FFF;
+}
+
+/* Testimonial Section */
+.testimonial-card-gradient {
+    position: relative;
+    background-color: rgba(30, 41, 59, 0.8); /* Gris azulado oscuro más sólido */
+    border-radius: 1.5rem;
+    z-index: 1;
+}
+
+.testimonial-card-gradient::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 1.5rem;
+    padding: 2px; /* Grosor del borde gradiente */
+    background: linear-gradient(135deg, rgba(16,185,129,0.8) 0%, rgba(15,23,42,0) 100%);
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* General spacing */
+section {
+    padding-top: 100px;
+    padding-bottom: 60px;
+    scroll-margin-top: 80px;
+}
+
+/* Featured Project Card Adjustments */
+#proyectos .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Responsividad para la imagen del card en móviles */
+@media (max-width: 767.98px) {
+    #proyectos .card img {
+        height: 250px;
+    }
+}
+
+/* Tech Stack Infinite Marquee */
+#tecnologias {
+    background-color: #070a13; /* Muy oscuro para separar del footer y body */
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.marquee-container {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+    /* Efecto de desvanecimiento en los bordes */
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.marquee-content {
+    display: inline-flex;
+    white-space: nowrap;
+    animation: marquee-scroll 45s linear infinite;
+    gap: 4rem;
+    padding-left: 4rem; /* Margen para empalme perfecto */
+    width: max-content;
+}
+
+.marquee-container:hover .marquee-content {
+    animation-play-state: paused;
+}
+
+@keyframes marquee-scroll {
+    to { transform: translateX(calc(-50% - 2rem)); } /* -50% del total - la mitad del gap */
+}
+
+.tech-icon {
+    font-size: 4.5rem;
+    transition: transform 0.3s ease;
+    cursor: default;
+}
+
+.tech-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Responsividad para la marquesina en móviles */
+@media (max-width: 768px) {
+    .marquee-content {
+        animation-duration: 25s;
+        gap: 2rem;
+        padding-left: 2rem;
+    }
+    @keyframes marquee-scroll-mobile {
+        to { transform: translateX(calc(-50% - 1rem)); }
+    }
+    .marquee-content {
+        animation-name: marquee-scroll-mobile;
+    }
+    .tech-icon {
+        font-size: 3.5rem;
+    }
+}
+
+/* Footer Adjustments */
+footer p, footer span, footer a {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Footer Social Icons */
+.social-icon-link {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.5rem;
+    transition: opacity 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+.social-icon-link:hover {
+    opacity: 1;
+    color: var(--bs-primary);
+    transform: scale(1.1) translateY(-2px);
+}
+
+/* Contact Form Specific Styles (Estética Claroscuro) */
+#contacto .card {
+    background-color: #1e2530;
+    border: 1px solid #2d3643 !important;
+}
+
+#contacto .form-control {
+    background-color: #131a22 !important;
+    border-color: #2d3643 !important;
+    color: #e2e8f0;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#contacto .form-control:focus {
+    border-color: var(--bs-primary) !important;
+    box-shadow: 0 0 0 0.25rem rgba(16, 185, 129, 0.25) !important;
+    background-color: #131a22 !important;
+}
+
+#contacto .form-control::placeholder {
+    color: #64748b;
+}
