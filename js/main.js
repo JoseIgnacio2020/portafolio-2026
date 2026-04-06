@@ -103,4 +103,22 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // 6. IntersectionObserver para botón WhatsApp en Footer
+    const footerElement = document.querySelector('footer');
+    if (footerElement && whatsappBtn) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    whatsappBtn.classList.add('whatsapp-at-footer');
+                } else {
+                    whatsappBtn.classList.remove('whatsapp-at-footer');
+                }
+            });
+        }, {
+            root: null,
+            threshold: 0.1 // Se activa cuando el 10% del footer es visible
+        });
+        observer.observe(footerElement);
+    }
 });
