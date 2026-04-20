@@ -70,23 +70,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
             fetch('/.netlify/functions/send-contact', {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
+                headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(formData)
             })
-                .then(res => res.json())
-                .then(() => {
+                .then(async res => {
+                    const data = await res.json();
+
+                    if (!res.ok) {
+                        throw new Error(data.error || 'Error');
+                    }
+
                     msgSending.classList.add('d-none');
                     msgSuccess.classList.remove('d-none');
                     contactForm.reset();
                     contactForm.classList.remove('was-validated');
                     grecaptcha.reset();
                 })
-                .catch(() => {
+                .catch((error) => {
                     msgSending.classList.add('d-none');
                     msgError.classList.remove('d-none');
-                    msgError.innerHTML = '<i class="bi bi-exclamation-triangle-fill me-2"></i> Error de envío.';
+                    msgError.innerHTML = `<i class="bi bi-exclamation-triangle-fill me-2"></i> ${error.message}`;
                 })
                 .finally(() => {
                     btnSubmit.innerHTML = originalBtnHtml;
