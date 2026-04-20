@@ -30,8 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // 4. Configuración EmailJS y Formulario
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
-        emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
-
         contactForm.addEventListener('submit', function (event) {
             event.preventDefault();
             event.stopPropagation();
@@ -62,25 +60,38 @@ document.addEventListener('DOMContentLoaded', () => {
             msgError.classList.add('d-none');
             msgSending.classList.remove('d-none');
 
-            emailjs.sendForm(
-                import.meta.env.VITE_EMAILJS_SERVICE_ID,
-                import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-                this
-            ).then(() => {
-                msgSending.classList.add('d-none');
-                msgSuccess.classList.remove('d-none');
-                contactForm.reset();
-                contactForm.classList.remove('was-validated');
-                grecaptcha.reset();
-            }, (error) => {
-                msgSending.classList.add('d-none');
-                msgError.classList.remove('d-none');
-                msgError.innerHTML = '<i class="bi bi-exclamation-triangle-fill me-2"></i> Error de conexión. Reintenta más tarde.';
-                console.error('Error EmailJS:', error);
-            }).finally(() => {
-                btnSubmit.innerHTML = originalBtnHtml;
-                btnSubmit.disabled = false;
-            });
+            const formData = {
+                token: recaptchaResponse,
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                message: document.getElementById('message').value
+            };
+
+            fetch('/.netlify/functions/send-contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            })
+                .then(res => res.json())
+                .then(() => {
+                    msgSending.classList.add('d-none');
+                    msgSuccess.classList.remove('d-none');
+                    contactForm.reset();
+                    contactForm.classList.remove('was-validated');
+                    grecaptcha.reset();
+                })
+                .catch(() => {
+                    msgSending.classList.add('d-none');
+                    msgError.classList.remove('d-none');
+                    msgError.innerHTML = '<i class="bi bi-exclamation-triangle-fill me-2"></i> Error de envío.';
+                })
+                .finally(() => {
+                    btnSubmit.innerHTML = originalBtnHtml;
+                    btnSubmit.disabled = false;
+                });
         });
     }
 
