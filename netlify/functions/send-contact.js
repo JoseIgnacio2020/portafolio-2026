@@ -1,26 +1,38 @@
 export async function handler(event) {
     try {
-        const { token, name, email, phone, message } = JSON.parse(event.body);
+        console.log("BODY:", event.body);
 
-        // 🔐 Validar reCAPTCHA con Google
+        const body = event.body ? JSON.parse(event.body) : {};
+        const { token, name, email, phone, message } = body;
+
+        console.log("TOKEN:", token);
+
+        // 🔐 reCAPTCHA
         const verifyRes = await fetch("https://www.google.com/recaptcha/api/siteverify", {
             method: "POST",
             headers: {
                 "Content-Type": "application/x-www-form-urlencoded"
             },
-            body: `secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${token}`
+            body: `secret = ${process.env.RECAPTCHA_SECRET_KEY}& response=${token} `
         });
 
         const verifyData = await verifyRes.json();
+        console.log("RECAPTCHA:", verifyData);
 
         if (!verifyData.success) {
             return {
                 statusCode: 400,
-                body: JSON.stringify({ error: "reCAPTCHA inválido" })
+                body: JSON.stringify({ error: "reCAPTCHA inválido", verifyData })
             };
         }
 
-        // 📧 Enviar con EmailJS (REST API)
+        console.log("ENV VARS:", {
+            service: process.env.EMAILJS_SERVICE_ID,
+            template: process.env.EMAILJS_TEMPLATE_ID,
+            user: process.env.EMAILJS_PUBLIC_KEY ? "OK" : "MISSING"
+        });
+
+        // 📧 EmailJS
         const emailRes = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
             method: "POST",
             headers: {
@@ -39,10 +51,13 @@ export async function handler(event) {
             })
         });
 
+        const emailText = await emailRes.text();
+        console.log("EMAILJS RESPONSE:", emailText);
+
         if (!emailRes.ok) {
             return {
                 statusCode: 500,
-                body: JSON.stringify({ error: "Error enviando email" })
+                body: JSON.stringify({ error: "EmailJS error", emailText })
             };
         }
 
@@ -52,6 +67,7 @@ export async function handler(event) {
         };
 
     } catch (error) {
+        console.error("ERROR:", error);
         return {
             statusCode: 500,
             body: JSON.stringify({ error: error.message })
