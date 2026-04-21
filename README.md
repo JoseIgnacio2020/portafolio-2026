@@ -22,10 +22,11 @@ Este repositorio contiene el código fuente de mi portafolio profesional, diseñ
 2. Instalar dependencias: `npm install`.
 3. Configurar variables de entorno: Crear un archivo `.env` con las siguientes llaves (excluidas del repositorio por seguridad):
    ```env
-   VITE_EMAILJS_SERVICE_ID=tu_service_id
-   VITE_EMAILJS_TEMPLATE_ID=tu_template_id
-   VITE_EMAILJS_PUBLIC_KEY=tu_public_key
-   VITE_RECAPTCHA_SITE_KEY=tu_site_key
+   EMAILJS_SERVICE_ID=tu_service_id
+   EMAILJS_TEMPLATE_ID=tu_template_id
+   EMAILJS_PUBLIC_KEY=tu_public_key
+   EMAILJS_PRIVATE_KEY=tu_private_key
+   RECAPTCHA_SITE_KEY=tu_site_key
    ```
 4. Ejecutar en modo desarrollo: `npm run dev`.
 5. Desplegar: El proyecto se despliega automáticamente a Netlify al hacer push al repositorio.

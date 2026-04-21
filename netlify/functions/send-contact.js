@@ -13,7 +13,7 @@ export async function handler(event) {
             headers: {
                 "Content-Type": "application/x-www-form-urlencoded"
             },
-            body: `secret = ${process.env.RECAPTCHA_SECRET_KEY}& response=${token} `
+            body: `secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${token}`
         });
 
         const verifyData = await verifyRes.json();
@@ -22,15 +22,12 @@ export async function handler(event) {
         if (!verifyData.success) {
             return {
                 statusCode: 400,
-                body: JSON.stringify({ error: "reCAPTCHA inválido", verifyData })
+                body: JSON.stringify({
+                    error: "reCAPTCHA inválido",
+                    googleResponse: verifyData
+                })
             };
         }
-
-        console.log("ENV VARS:", {
-            service: process.env.EMAILJS_SERVICE_ID,
-            template: process.env.EMAILJS_TEMPLATE_ID,
-            user: process.env.EMAILJS_PUBLIC_KEY ? "OK" : "MISSING"
-        });
 
         // 📧 EmailJS
         const emailRes = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
