@@ -25,7 +25,6 @@ Este repositorio contiene el código fuente de mi portafolio profesional, diseñ
    EMAILJS_SERVICE_ID=tu_service_id
    EMAILJS_TEMPLATE_ID=tu_template_id
    EMAILJS_PUBLIC_KEY=tu_public_key
-   EMAILJS_PRIVATE_KEY=tu_private_key
    RECAPTCHA_SITE_KEY=tu_site_key
    ```
 4. Ejecutar en modo desarrollo: `npm run dev`.
