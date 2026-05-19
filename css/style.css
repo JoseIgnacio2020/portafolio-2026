@@ -296,3 +296,12 @@ footer p, footer span, footer a {
 #contacto .form-control::placeholder {
     color: #64748b;
 }
+
+/* Responsividad para el Hero (reducir espacio superior en móviles) */
+@media (max-width: 991.98px) {
+    #inicio .min-vh-100 {
+        min-height: auto !important;
+        padding-top: 5rem !important; /* Ajusta este valor si lo quieres más arriba o abajo */
+        padding-bottom: 4rem !important;
+    }
+}
