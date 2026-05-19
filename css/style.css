@@ -301,7 +301,7 @@ footer p, footer span, footer a {
 @media (max-width: 991.98px) {
     #inicio .min-vh-100 {
         min-height: auto !important;
-        padding-top: 5rem !important; /* Ajusta este valor si lo quieres más arriba o abajo */
+        padding-top: 0rem !important; /* Ajusta este valor si lo quieres más arriba o abajo */
         padding-bottom: 4rem !important;
     }
 }
