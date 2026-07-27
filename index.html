@@ -1,584 +1,892 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es" data-bs-theme="dark">
-
-<head>
+  <head>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4HGFGS3HZF"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-4HGFGS3HZF"
+    ></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-        gtag('config', 'G-4HGFGS3HZF');
+      gtag("config", "G-4HGFGS3HZF");
     </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Desarrollador Web Senior con 14 años de experiencia. Planes de diseño web profesional, landing pages y e-commerce a medida en Chile. Soluciones rápidas y seguras.">
-    <meta name="keywords" content="Desarrollo Web, Pymes, Chile, Landing Page, Sitio Corporativo, E-commerce">
-    <meta name="author" content="José Ignacio Silva Inestrosa">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Desarrollador Web Senior con 14 años de experiencia. Planes de diseño web profesional, landing pages y e-commerce a medida en Chile. Soluciones rápidas y seguras."
+    />
+    <meta
+      name="keywords"
+      content="Desarrollo Web, Pymes, Chile, Landing Page, Sitio Corporativo, E-commerce"
+    />
+    <meta name="author" content="José Ignacio Silva Inestrosa" />
 
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="José Ignacio | Páginas Web Profesionales que Venden">
-    <meta property="og:description"
-        content="Potencia tu negocio con sitios web a medida, rápidos y seguros. 14 años de experiencia senior transformando ideas en realidad digital.">
-    <meta property="og:image" content="https://jose-ignacio-dev.netlify.app/assets/img/og-image-v3.png?v=3">
-    <meta property="og:url" content="https://jose-ignacio-dev.netlify.app/">
-    <meta property="og:type" content="website">
+    <meta
+      property="og:title"
+      content="José Ignacio | Páginas Web Profesionales que Venden"
+    />
+    <meta
+      property="og:description"
+      content="Potencia tu negocio con sitios web a medida, rápidos y seguros. 14 años de experiencia senior transformando ideas en realidad digital."
+    />
+    <meta
+      property="og:image"
+      content="https://jose-ignacio-dev.netlify.app/assets/img/og-image-v3.png?v=3"
+    />
+    <meta property="og:url" content="https://jose-ignacio-dev.netlify.app/" />
+    <meta property="og:type" content="website" />
 
-    <meta name="google-site-verification" content="ZQnmp4qiqvyA4Fiem2WJfIac8R-_A2EpQ-AFoXT3-WU" />
+    <meta
+      name="google-site-verification"
+      content="ZQnmp4qiqvyA4Fiem2WJfIac8R-_A2EpQ-AFoXT3-WU"
+    />
 
     <title>Planes de Desarrollo Web Profesional | José Ignacio</title>
 
-    <link rel="canonical" href="https://jose-ignacio-dev.netlify.app/">
+    <link rel="canonical" href="https://jose-ignacio-dev.netlify.app/" />
 
     <!-- Google Fonts: Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Bootstrap 5 CSS (Local Vendor) -->
-    <link href="./assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link
+      href="./assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
     <!-- Bootstrap Icons via CDN -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
 
     <!-- Devicon Icons via CDN -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
 
     <!-- Custom CSS -->
-    <link href="./css/style.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet" />
 
     <!-- JSON-LD SEO Structured Data -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "Person",
-          "@id": "https://jose-ignacio-dev.netlify.app/#person",
-          "name": "José Ignacio Silva Inestrosa",
-          "jobTitle": "Desarrollador Web Full Stack Senior",
-          "url": "https://jose-ignacio-dev.netlify.app/",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Santiago",
-            "addressCountry": "CL"
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Person",
+            "@id": "https://jose-ignacio-dev.netlify.app/#person",
+            "name": "José Ignacio Silva Inestrosa",
+            "jobTitle": "Desarrollador Web Full Stack Senior",
+            "url": "https://jose-ignacio-dev.netlify.app/",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Santiago",
+              "addressCountry": "CL"
+            },
+            "knowsAbout": ["PHP", "Laravel", "MySQL", "JavaScript", "Angular"]
           },
-          "knowsAbout": [
-            "PHP",
-            "Laravel",
-            "MySQL",
-            "JavaScript",
-            "Angular"
-          ]
-        },
-        {
-          "@type": "ProfessionalService",
-          "@id": "https://jose-ignacio-dev.netlify.app/#service",
-          "name": "Desarrollo Web Full Stack - José Ignacio Silva Inestrosa",
-          "provider": {
-            "@id": "https://jose-ignacio-dev.netlify.app/#person"
-          },
-          "url": "https://jose-ignacio-dev.netlify.app/",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Santiago",
-            "addressCountry": "CL"
+          {
+            "@type": "ProfessionalService",
+            "@id": "https://jose-ignacio-dev.netlify.app/#service",
+            "name": "Desarrollo Web Full Stack - José Ignacio Silva Inestrosa",
+            "provider": {
+              "@id": "https://jose-ignacio-dev.netlify.app/#person"
+            },
+            "url": "https://jose-ignacio-dev.netlify.app/",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Santiago",
+              "addressCountry": "CL"
+            }
           }
-        }
-      ]
-    }
+        ]
+      }
     </script>
-</head>
+  </head>
 
-<body data-bs-spy="scroll" data-bs-target="#navbar-main" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true"
-    tabindex="0">
-
+  <body
+    data-bs-spy="scroll"
+    data-bs-target="#navbar-main"
+    data-bs-root-margin="0px 0px -40%"
+    data-bs-smooth-scroll="true"
+    tabindex="0"
+  >
     <!-- Header / Navbar -->
     <header>
-        <nav id="navbar-main" class="navbar navbar-expand-lg fixed-top shadow-sm" data-bs-theme="dark">
-            <div class="container">
-                <a class="navbar-brand fw-bold text-primary" href="#inicio">&lt;Dev/&gt;</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                    <ul class="navbar-nav fw-medium gap-lg-3">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#inicio">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#planes">Planes</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#proyectos">Proyectos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#testimonios">Testimonios</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#servicios">Servicios</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contacto">Contacto</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+      <nav
+        id="navbar-main"
+        class="navbar navbar-expand-lg fixed-top shadow-sm"
+        data-bs-theme="dark"
+      >
+        <div class="container">
+          <a class="navbar-brand fw-bold text-primary" href="#inicio"
+            >&lt;Dev/&gt;</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav fw-medium gap-lg-3">
+              <li class="nav-item">
+                <a class="nav-link" href="#inicio">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#planes">Planes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#proyectos">Proyectos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#testimonios">Testimonios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#servicios">Servicios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contacto">Contacto</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
 
     <main>
-        <!-- Hero Section -->
-        <section id="inicio" class="hero-gradient position-relative">
-            <div class="container">
-                <div class="row align-items-center min-vh-100">
-                    <div class="col-lg-6 text-center text-lg-start pt-5 pt-lg-0">
-                        <span
-                            class="badge text-bg-primary bg-opacity-10 text-primary border border-primary mb-3 px-3 py-2 rounded-pill">
-                            14 Años de Experiencia Senior
-                        </span>
-                        <h1 class="display-4 fw-bold mb-4 text-white">
-                            Tu negocio merece una web que <span class="text-primary">realmente venda</span>
-                        </h1>
-                        <p class="lead text-secondary mb-5">
-                            Diseño sitios web a medida, ultrarrápidos y seguros. Sin plantillas genéricas que limitan tu
-                            crecimiento.
-                        </p>
-                        <div class="d-flex flex-column flex-sm-row gap-3">
-                            <a href="#planes" class="btn btn-primary btn-lg px-4 rounded-pill">Ver Planes
-                                Profesionales</a>
-                            <a href="#contacto" class="btn btn-outline-light btn-lg px-4 rounded-pill">Consultoría
-                                Gratuita</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 text-center d-none d-lg-block">
-                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80"
-                            alt="Desarrollo Web Senior"
-                            class="img-fluid rounded-4 shadow-lg border border-secondary border-opacity-25">
-                    </div>
-                </div>
+      <!-- Hero Section -->
+      <section id="inicio" class="hero-gradient position-relative">
+        <div class="container">
+          <div class="row align-items-center min-vh-100">
+            <div class="col-lg-6 text-center text-lg-start pt-5 pt-lg-0">
+              <span
+                class="badge text-bg-primary bg-opacity-10 text-primary border border-primary mb-3 px-3 py-2 rounded-pill"
+              >
+                14 Años de Experiencia Senior
+              </span>
+              <h1 class="display-4 fw-bold mb-4 text-white">
+                Tu negocio merece una web que
+                <span class="text-primary">realmente venda</span>
+              </h1>
+              <p class="lead text-secondary mb-5">
+                Diseño sitios web a medida, ultrarrápidos y seguros. Sin
+                plantillas genéricas que limitan tu crecimiento.
+              </p>
+              <div class="d-flex flex-column flex-sm-row gap-3">
+                <a
+                  href="#planes"
+                  class="btn btn-primary btn-lg px-4 rounded-pill"
+                  >Ver Planes Profesionales</a
+                >
+                <a
+                  href="#contacto"
+                  class="btn btn-outline-light btn-lg px-4 rounded-pill"
+                  >Consultoría Gratuita</a
+                >
+              </div>
             </div>
-        </section>
-
-        <!-- Sección de Planes Profesionales -->
-        <section id="planes" class="py-5 bg-body-secondary bg-opacity-10">
-            <div class="container">
-                <div class="text-center mb-5">
-                    <h2 class="fw-bold display-6">Planes de Desarrollo Profesional</h2>
-                    <p class="text-primary fw-medium mb-2">Desarrollo 100% a medida (sin WordPress ni plantillas
-                        genéricas)</p>
-                    <p class="text-secondary col-md-8 mx-auto">Soluciones de alto rendimiento con estándares de
-                        seguridad corporativa, diseñadas para escalar tu negocio.</p>
-                </div>
-
-                <div class="row g-4">
-                    <!-- Plan 1: Landing Page -->
-                    <div class="col-lg-4">
-                        <div class="card h-100 p-4 rounded-4 border-0 shadow-sm">
-                            <div class="card-body d-flex flex-column">
-                                <h3 class="h4 fw-bold text-primary mb-2">Landing Profesional</h3>
-                                <div class="mb-4">
-                                    <span class="h2 fw-bold text-white">$200.000</span>
-
-                                    <p class="text-success small fw-medium mb-0">✔ Recupera tu inversión con tus
-                                        primeros contactos</p>
-                                </div>
-                                <p class="text-secondary small mb-4">Convierte visitas en clientes con una página
-                                    diseñada estratégicamente para generar ventas desde el primer día.</p>
-                                <ul class="list-unstyled mb-5">
-                                    <li class="mb-2"><i class="bi bi-check-circle text-primary me-2"></i>Diseño enfocado
-                                        en conversiones</li>
-                                    <li class="mb-2"><i class="bi bi-check-circle text-primary me-2"></i>SEO Técnico
-                                        (Google Ready)</li>
-                                    <li class="mb-2"><i class="bi bi-check-circle text-primary me-2"></i>Integración con
-                                        WhatsApp</li>
-                                    <li class="mb-2"><i class="bi bi-check-circle text-primary me-2"></i>Formulario de
-                                        captación seguro</li>
-                                    <li class="mb-2"><i class="bi bi-check-circle text-primary me-2"></i>Carga
-                                        ultrarrápida (Senior Web Perf)</li>
-                                    <li class="mb-2"><i class="bi bi-check-circle text-primary me-2"></i>Certificado SSL
-                                        y Estadísticas</li>
-                                </ul>
-                                <a href="#contacto" class="btn btn-outline-primary w-100 rounded-pill mt-auto">Solicitar
-                                    Plan</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Plan 2: Corporativo -->
-                    <div class="col-lg-4">
-                        <div class="card h-100 p-4 rounded-4 border border-primary shadow"
-                            style="background-color: rgba(16, 185, 129, 0.05);">
-                            <div class="card-body d-flex flex-column">
-                                <div class="badge bg-primary rounded-pill mb-3 w-50">Más Recomendado</div>
-                                <h3 class="h4 fw-bold text-white mb-2">Sitio Corporativo</h3>
-                                <div class="mb-4">
-                                    <span class="h2 fw-bold text-white">$400.000</span>
-
-                                    <p class="text-success small fw-medium mb-0">✔ Posiciona tu marca con autoridad
-                                        profesional</p>
-                                </div>
-                                <p class="text-secondary small mb-4">Construye confianza y proyecta solidez con un sitio
-                                    web que transmite seriedad y atrae clientes corporativos.</p>
-                                <ul class="list-unstyled mb-5">
-                                    <li class="mb-2"><i class="bi bi-check-circle text-primary me-2"></i>Hasta 5
-                                        secciones personalizadas</li>
-                                    <li class="mb-2"><i class="bi bi-check-circle text-primary me-2"></i>Arquitectura
-                                        multi-página robusta</li>
-                                    <li class="mb-2"><i class="bi bi-check-circle text-primary me-2"></i>SEO Avanzado
-                                        por sección</li>
-                                    <li class="mb-2"><i class="bi bi-check-circle text-primary me-2"></i>Integración
-                                        RRSS y WhatsApp</li>
-                                    <li class="mb-2"><i class="bi bi-check-circle text-primary me-2"></i>Optimización de
-                                        carga premium</li>
-                                    <li class="mb-2"><i class="bi bi-check-circle text-primary me-2"></i>Seguridad de
-                                        nivel empresarial</li>
-                                </ul>
-                                <a href="#contacto" class="btn btn-primary w-100 rounded-pill mt-auto shadow">Solicitar
-                                    Plan</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Plan 3: E-commerce -->
-                    <div class="col-lg-4">
-                        <div class="card h-100 p-4 rounded-4 border-0 shadow-sm">
-                            <div class="card-body d-flex flex-column">
-                                <h3 class="h4 fw-bold text-primary mb-2">E-commerce Premium</h3>
-                                <div class="mb-4">
-                                    <span class="h2 fw-bold text-white">$800.000</span>
-                                    <p class="text-success small fw-medium mb-0">✔ Tu sucursal abierta 24/7 para todo
-                                        Chile</p>
-                                </div>
-                                <p class="text-secondary small mb-4">Empieza a vender online con una tienda profesional
-                                    preparada para procesar pagos y gestionar tus ventas sin fricción.</p>
-                                <ul class="list-unstyled mb-5">
-                                    <li class="mb-2"><i class="bi bi-check-circle text-primary me-2"></i>Pagos
-                                        integrados (Mercado Pago / Flow)</li>
-                                    <li class="mb-2"><i class="bi bi-check-circle text-primary me-2"></i>Sistema de
-                                        cupones y promociones</li>
-                                    <li class="mb-2"><i class="bi bi-check-circle text-primary me-2"></i>Carrito
-                                        optimizado para conversión</li>
-                                    <li class="mb-2"><i class="bi bi-check-circle text-primary me-2"></i>Panel de
-                                        gestión autoadministrable</li>
-                                    <li class="mb-2"><i class="bi bi-check-circle text-primary me-2"></i>Inventario y
-                                        productos ilimitados</li>
-                                    <li class="mb-2"><i class="bi bi-check-circle text-primary me-2"></i>SEO, SSL y
-                                        Analítica avanzada</li>
-                                </ul>
-                                <a href="#contacto" class="btn btn-outline-primary w-100 rounded-pill mt-auto">Solicitar
-                                    Plan</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Bloque de Diferenciación Técnica -->
-                <div class="mt-5 p-4 rounded-4 border border-secondary border-opacity-25 bg-dark shadow-lg">
-                    <div class="row align-items-center text-center text-lg-start">
-                        <div class="col-lg-8">
-                            <h4 class="fw-bold mb-3"><i class="bi bi-award text-primary me-2"></i>¿Por qué elegir
-                                desarrollo a medida sobre WordPress?</h4>
-                            <p class="text-secondary mb-3">
-                                Las ofertas económicas de $150.000 dependen de plantillas lentas y plugins inseguros. Al
-                                trabajar con un <strong>Analista Programador Senior</strong> obtienes:
-                            </p>
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <p class="small mb-0"><i
-                                            class="bi bi-lightning-charge text-warning me-2"></i><strong>Más
-                                            ventas:</strong> Una web rápida convierte hasta un 40% más que una lenta.
-                                    </p>
-                                </div>
-                                <div class="col-md-6">
-                                    <p class="small mb-0"><i
-                                            class="bi bi-shield-check text-success me-2"></i><strong>Cero
-                                            riesgo:</strong> Código propio sin vulnerabilidades de terceros.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 text-center mt-4 mt-lg-0">
-                            <p class="text-secondary small mb-3">No compres un problema técnico, invierte en una
-                                solución de ingeniería.</p>
-                            <a href="#contacto" class="btn btn-sm btn-outline-light rounded-pill">Asesoría Gratuita</a>
-                        </div>
-                    </div>
-                </div>
+            <div class="col-lg-6 text-center d-none d-lg-block">
+              <img
+                src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80"
+                alt="Desarrollo Web Senior"
+                class="img-fluid rounded-4 shadow-lg border border-secondary border-opacity-25"
+              />
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <!-- Proyectos Section -->
-        <section id="proyectos" class="bg-body-secondary bg-opacity-10">
-            <div class="container">
-                <div class="text-center mb-5">
-                    <h2 class="fw-bold display-6">Proyectos Destacados</h2>
-                    <p class="text-secondary col-md-8 mx-auto">Conoce cómo ayudamos a transformar la presencia digital y
-                        acelerar las ventas de nuestros clientes.</p>
-                </div>
+      <!-- Sección de Planes Profesionales -->
+      <section id="planes" class="py-5 bg-body-secondary bg-opacity-10">
+        <div class="container">
+          <div class="text-center mb-5">
+            <h2 class="fw-bold display-6">Planes de Desarrollo Profesional</h2>
+            <p class="text-primary fw-medium mb-2">
+              Desarrollo 100% a medida (sin WordPress ni plantillas genéricas)
+            </p>
+            <p class="text-secondary col-md-8 mx-auto">
+              Soluciones de alto rendimiento con estándares de seguridad
+              corporativa, diseñadas para escalar tu negocio.
+            </p>
+          </div>
 
-                <div class="row justify-content-center g-4">
-                    <!-- Proyecto 1: Metrelex -->
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <article class="card h-100 rounded-4 overflow-hidden shadow">
+          <div class="row g-4">
+            <!-- Plan 1: Landing Page -->
+            <div class="col-lg-6">
+              <div class="card h-100 p-4 rounded-4 border-0 shadow-sm">
+                <div class="card-body d-flex flex-column">
+                  <h3 class="h4 fw-bold text-primary mb-2">
+                    Landing Profesional
+                  </h3>
 
-                            <div class="card-img-container p-3"
-                                style="background-color: #ffffff; height: 220px; display: flex; align-items: center; justify-content: center;">
-                                <img src="assets/img/logo-Metrelex.png"
-                                    alt="Logo de Metrelex - Proyecto de sitio web corporativo" class="img-fluid"
-                                    style="max-height: 100%; object-fit: contain;">
-                            </div>
+                  <div class="mb-4">
+                    <span class="h2 fw-bold text-white">$200.000</span>
 
-                            <!-- Parte Media (Contenido) -->
-                            <div class="card-body p-4 d-flex flex-column text-center">
-                                <div class="mb-3">
-                                    <span class="badge bg-primary px-3 py-2 rounded-pill">Sitio Web Corporativo</span>
-                                </div>
-                                <h3 class="card-title h4 fw-bold text-white mb-3">Metrelex</h3>
-                                <p class="card-text text-white mb-4 flex-grow-1">
-                                    Metrelex no tenía presencia web. Se creó un sitio profesional con botón de WhatsApp
-                                    y formulario de contacto, permitiéndoles mostrar sus servicios y recibir consultas
-                                    de nuevos clientes.
-                                </p>
-
-                                <!-- Parte Inferior (Footer de Card) -->
-                                <div class="mb-4">
-                                    <small class="text-secondary fw-medium">
-                                        <i class="bi bi-graph-up text-primary me-1"></i>
-                                        Sitio optimizado para generar contactos desde internet
-                                    </small>
-                                </div>
-                                <div class="mt-auto">
-                                    <a href="https://metrelex.cl"
-                                        class="btn btn-primary rounded-pill btn-hover-elevate px-4 w-100"
-                                        target="_blank" rel="noopener noreferrer">
-                                        Ver Sitio <i class="bi bi-box-arrow-up-right ms-2"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Testimonios Section -->
-        <section id="testimonios">
-            <div class="container">
-                <div class="text-center mb-5">
-                    <h2 class="fw-bold display-6">Casos de Éxito</h2>
-                    <p class="text-secondary col-md-8 mx-auto">Lo que dicen nuestros clientes sobre el resultado de
-                        nuestro trabajo.</p>
-                </div>
-
-                <div class="row justify-content-center">
-                    <div class="col-md-10 col-lg-8">
-                        <!-- Estructura wrappper: lista para convertirse en carrusel en el futuro -->
-                        <div class="testimonial-wrapper">
-                            <article class="testimonial-card-gradient p-4 p-md-5 text-center shadow">
-                                <i class="bi bi-quote display-3 text-primary opacity-25 mb-2 d-inline-block"></i>
-                                <p class="lead fst-italic mb-4 text-secondary lh-base px-md-3">
-                                    "Contratamos a José Ignacio para el desarrollo de nuestro sitio corporativo y el
-                                    resultado superó las expectativas. La web es totalmente responsiva y se ve impecable
-                                    en celulares, lo que era clave para nosotros. Además, la integración del botón de
-                                    WhatsApp y el formulario de contacto seguro al correo de la empresa nos ha
-                                    facilitado mucho la comunicación directa con nuevos clientes. Un trabajo técnico de
-                                    gran nivel y muy confiable. Además, ahora recibimos consultas directamente desde la
-                                    web, lo que antes no teníamos.
-                                </p>
-                                <div class="d-flex justify-content-center gap-1 mb-3">
-                                    <i class="bi bi-star-fill text-warning"></i>
-                                    <i class="bi bi-star-fill text-warning"></i>
-                                    <i class="bi bi-star-fill text-warning"></i>
-                                    <i class="bi bi-star-fill text-warning"></i>
-                                    <i class="bi bi-star-fill text-warning"></i>
-                                </div>
-                                <h3 class="h5 fw-bold mb-1 text-white">Alex Muñoz</h3>
-                                <p class="small text-primary mb-0 fw-medium">fundador de Metrelex</p>
-                            </article>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Servicios Section -->
-        <section id="servicios" class="py-5">
-            <div class="container">
-                <div class="text-center mb-5">
-                    <h2 class="fw-bold display-6">Nuestros Servicios</h2>
-                    <p class="text-secondary col-md-8 mx-auto">Soluciones IT rentables, diseñadas para potenciar la
-                        eficiencia y el crecimiento de tu empresa.</p>
-                </div>
-
-                <div class="row g-4 justify-content-center">
-                    <!-- Servicio 1 -->
-                    <div class="col-md-6 col-lg-3">
-                        <div class="card h-100 p-4 rounded-4 text-center border-0 bg-body-tertiary">
-                            <i class="bi bi-window-sidebar h1 text-primary mb-3"></i>
-                            <h3 class="h5 fw-bold text-white">Sitios Corporativos</h3>
-                            <p class="small text-secondary mb-0">Webs profesionales que generan confianza y presencia de
-                                marca inmediata.</p>
-                        </div>
-                    </div>
-
-                    <!-- Servicio 2 -->
-                    <div class="col-md-6 col-lg-3">
-                        <div class="card h-100 p-4 rounded-4 text-center border-0 bg-body-tertiary">
-                            <i class="bi bi-bullseye h1 text-primary mb-3"></i>
-                            <h3 class="h5 fw-bold text-white">Landing Pages</h3>
-                            <p class="small text-secondary mb-0">Páginas enfocadas 100% en captar clientes y cerrar
-                                ventas rápidamente.</p>
-                        </div>
-                    </div>
-
-                    <!-- Servicio 3 -->
-                    <div class="col-md-6 col-lg-3">
-                        <div class="card h-100 p-4 rounded-4 text-center border-0 bg-body-tertiary">
-                            <i class="bi bi-lightning-charge h1 text-primary mb-3"></i>
-                            <h3 class="h5 fw-bold text-white">Optimización Web</h3>
-                            <p class="small text-secondary mb-0">Mejora de velocidad y rendimiento para que Google te
-                                ponga en los primeros lugares.</p>
-                        </div>
-                    </div>
-
-                    <!-- Servicio 4 -->
-                    <div class="col-md-6 col-lg-3">
-                        <div class="card h-100 p-4 rounded-4 text-center border-0 bg-body-tertiary">
-                            <i class="bi bi-whatsapp h1 text-primary mb-3"></i>
-                            <h3 class="h5 fw-bold text-white">Botón WhatsApp</h3>
-                            <p class="small text-secondary mb-0">Integración directa para que tus clientes te hablen con
-                                un solo clic.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contacto Section -->
-        <section id="contacto">
-            <div class="container">
-                <div class="text-center mb-5">
-                    <h2 class="fw-bold display-6">Contáctame</h2>
-                    <p class="text-secondary col-md-8 mx-auto">
-                        Solicita una asesoría sin compromiso para definir el mejor plan para tu negocio.
+                    <p class="text-success small fw-medium mb-0">
+                      ✔ Recupera tu inversión con tus primeros contactos
                     </p>
+                  </div>
+
+                  <p class="text-secondary small mb-4">
+                    Convierte visitas en clientes con una página diseñada
+                    estratégicamente para generar ventas desde el primer día.
+                  </p>
+
+                  <ul class="list-unstyled mb-5">
+                    <li class="mb-2">
+                      <i class="bi bi-check-circle text-primary me-2"></i>Diseño
+                      enfocado en conversiones
+                    </li>
+
+                    <li class="mb-2">
+                      <i class="bi bi-check-circle text-primary me-2"></i
+                      >Optimizada para aparecer en Google
+                    </li>
+
+                    <li class="mb-2">
+                      <i class="bi bi-check-circle text-primary me-2"></i
+                      >Integración directa con WhatsApp
+                    </li>
+
+                    <li class="mb-2">
+                      <i class="bi bi-check-circle text-primary me-2"></i
+                      >Formulario seguro para captar clientes
+                    </li>
+
+                    <li class="mb-2">
+                      <i class="bi bi-check-circle text-primary me-2"></i>Carga
+                      ultrarrápida en computadores y celulares
+                    </li>
+
+                    <li class="mb-2">
+                      <i class="bi bi-check-circle text-primary me-2"></i
+                      >Certificado SSL y estadísticas de visitas
+                    </li>
+                  </ul>
+                  <a
+                    href="#contacto"
+                    class="btn btn-outline-primary w-100 rounded-pill mt-auto"
+                    >Solicitar Plan</a
+                  >
                 </div>
-
-                <div class="row align-items-center justify-content-center g-5">
-                    <div class="col-lg-8">
-                        <div class="card p-4 p-md-5 rounded-4 border-0 shadow">
-                            <form id="contact-form" class="needs-validation" novalidate>
-                                <div class="row g-3">
-                                    <div class="col-12">
-                                        <label for="name" class="form-label fw-medium">Nombre Completo</label>
-                                        <input type="text" class="form-control" id="name" name="name" required
-                                            minlength="3" placeholder="Ej: José Ignacio Silva">
-                                        <div class="invalid-feedback">Por favor ingresa tu nombre completo.</div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="email" class="form-label fw-medium">Correo Electrónico</label>
-                                        <input type="email" class="form-control" id="email" name="email"
-                                            placeholder="Ej: jose@gmail.com" required>
-                                        <div class="invalid-feedback">Por favor ingresa un correo electrónico válido.
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="phone" class="form-label fw-medium">Teléfono (Opcional)</label>
-                                        <input type="tel" class="form-control" id="phone" name="phone"
-                                            placeholder="Ej: 912345678" pattern="[0-9]{9}">
-                                        <div class="invalid-feedback">El teléfono debe tener 9 dígitos numéricos (Ej:
-                                            912345678).</div>
-                                    </div>
-                                    <div class="col-12">
-                                        <label for="message" class="form-label fw-medium">Mensaje</label>
-                                        <textarea class="form-control" id="message" name="message" rows="4" required
-                                            minlength="10"
-                                            placeholder="Cuéntame brevemente sobre tu negocio o proyecto..."></textarea>
-                                        <div class="invalid-feedback">Por favor ingresa tu mensaje (mínimo 10
-                                            caracteres).</div>
-                                    </div>
-                                    <div class="col-12 d-flex justify-content-center justify-content-lg-start mt-3">
-                                        <div class="g-recaptcha" data-sitekey="6LftzMEsAAAAAHFmt9xLk58UGHYgePA8yFIHUyT3"
-                                            data-theme="dark"></div>
-                                    </div>
-                                    <div class="col-12 mt-4 text-center text-lg-start">
-                                        <button type="submit"
-                                            class="btn btn-primary rounded-pill px-5 py-2 fw-medium btn-hover-elevate w-100"
-                                            id="btn-submit">
-                                            Enviar Mensaje <i class="bi bi-send ms-2"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </form>
-
-                            <div id="form-message-sending" class="alert alert-info d-none mt-4 rounded-3 border-0"
-                                role="alert">
-                                <i class="bi bi-hourglass-split me-2"></i> Enviando...
-                            </div>
-                            <div id="form-message-success" class="alert d-none mt-4 rounded-3 border-0"
-                                style="background-color: rgba(16, 185, 129, 0.1); color: #10b981;" role="alert">
-                                <i class="bi bi-check-circle-fill me-2"></i> ¡Mensaje enviado exitosamente! Te
-                                contactaré a la brevedad.
-                            </div>
-                            <div id="form-message-error" class="alert alert-danger d-none mt-4 rounded-3 border-0"
-                                role="alert">
-                                <i class="bi bi-exclamation-triangle-fill me-2"></i> Ocurrió un error al enviar. Por
-                                favor intenta nuevamente o marca la casilla de seguridad.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 text-center text-lg-start ps-lg-5">
-                        <div class="mb-5">
-                            <i class="bi bi-instagram text-primary" style="font-size: 2rem;"></i>
-                            <h3 class="h5 fw-bold mt-2">Instagram</h3>
-                            <p class="text-secondary mb-0">Conoce más sobre mi trabajo en <br>
-                                <a href="https://www.instagram.com/joseignacio.devweb/" target="_blank"
-                                    class="text-primary text-decoration-none fw-medium">@joseignacio.devweb</a>
-                            </p>
-                        </div>
-                        <div class="mb-4">
-                            <i class="bi bi-linkedin text-primary" style="font-size: 2rem;"></i>
-                            <h3 class="h5 fw-bold mt-2">LinkedIn</h3>
-                            <p class="text-secondary mb-0">También estoy disponible para conectar y charlar en <br>
-                                <a href="https://www.linkedin.com/in/jose-ignacio-silva-inestrosa/" target="_blank"
-                                    class="text-primary text-decoration-none fw-medium">mi perfil de LinkedIn</a>.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
-        </section>
+
+            <!-- Plan 2: Corporativo -->
+            <div class="col-lg-6">
+              <div
+                class="card h-100 p-4 rounded-4 border border-primary shadow"
+                style="background-color: rgba(16, 185, 129, 0.05)"
+              >
+                <div class="card-body d-flex flex-column">
+                  <div class="badge bg-primary rounded-pill mb-3 w-50">
+                    Más Recomendado
+                  </div>
+                  <h3 class="h4 fw-bold text-white mb-2">Sitio Corporativo</h3>
+
+                  <div class="mb-4">
+                    <span class="h2 fw-bold text-white">$400.000</span>
+
+                    <p class="text-success small fw-medium mb-0">
+                      ✔ Posiciona tu marca con autoridad profesional
+                    </p>
+                  </div>
+
+                  <p class="text-secondary small mb-4">
+                    Construye confianza y proyecta solidez con un sitio web
+                    profesional diseñado para atraer nuevos clientes.
+                  </p>
+
+                  <ul class="list-unstyled mb-5">
+                    <li class="mb-2">
+                      <i class="bi bi-check-circle text-primary me-2"></i>Hasta
+                      5 secciones personalizadas
+                    </li>
+
+                    <li class="mb-2">
+                      <i class="bi bi-check-circle text-primary me-2"></i
+                      >Estructura profesional para presentar tu empresa y
+                      servicios
+                    </li>
+
+                    <li class="mb-2">
+                      <i class="bi bi-check-circle text-primary me-2"></i>SEO
+                      avanzado para cada sección
+                    </li>
+
+                    <li class="mb-2">
+                      <i class="bi bi-check-circle text-primary me-2"></i
+                      >Integración con WhatsApp y redes sociales
+                    </li>
+
+                    <li class="mb-2">
+                      <i class="bi bi-check-circle text-primary me-2"></i
+                      >Optimización avanzada de velocidad
+                    </li>
+
+                    <li class="mb-2">
+                      <i class="bi bi-check-circle text-primary me-2"></i
+                      >Protección contra accesos no autorizados y navegación
+                      segura (SSL)
+                    </li>
+                  </ul>
+                  <a
+                    href="#contacto"
+                    class="btn btn-primary w-100 rounded-pill mt-auto shadow"
+                    >Solicitar Plan</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Plan 3: E-commerce -->
+            <!-- <div class="col-lg-4">
+              <div class="card h-100 p-4 rounded-4 border-0 shadow-sm">
+                <div class="card-body d-flex flex-column">
+                  <h3 class="h4 fw-bold text-primary mb-2">
+                    E-commerce Premium
+                  </h3>
+                  <div class="mb-4">
+                    <span class="h2 fw-bold text-white">$800.000</span>
+                    <p class="text-success small fw-medium mb-0">
+                      ✔ Tu sucursal abierta 24/7 para todo Chile
+                    </p>
+                  </div>
+                  <p class="text-secondary small mb-4">
+                    Empieza a vender las 24 horas del día con una tienda online
+                    profesional preparada para crecer junto a tu negocio.
+                  </p>
+                  <ul class="list-unstyled mb-5">
+                    <li class="mb-2">
+                      <i class="bi bi-check-circle text-primary me-2"></i>Pagos
+                      integrados (Mercado Pago / Flow)
+                    </li>
+
+                    <li class="mb-2">
+                      <i class="bi bi-check-circle text-primary me-2"></i
+                      >Sistema de cupones y promociones
+                    </li>
+
+                    <li class="mb-2">
+                      <i class="bi bi-check-circle text-primary me-2"></i
+                      >Carrito optimizado para aumentar las ventas
+                    </li>
+
+                    <li class="mb-2">
+                      <i class="bi bi-check-circle text-primary me-2"></i>Panel
+                      de administración autogestionable
+                    </li>
+
+                    <li class="mb-2">
+                      <i class="bi bi-check-circle text-primary me-2"></i
+                      >Productos e inventario ilimitados
+                    </li>
+
+                    <li class="mb-2">
+                      <i class="bi bi-check-circle text-primary me-2"></i>SEO,
+                      SSL y estadísticas avanzadas
+                    </li>
+                  </ul>
+                  <a
+                    href="#contacto"
+                    class="btn btn-outline-primary w-100 rounded-pill mt-auto"
+                    >Solicitar Plan</a
+                  >
+                </div>
+              </div>
+            </div>-->
+          </div>
+
+          <!-- Bloque de Diferenciación Técnica -->
+          <div
+            class="mt-5 p-4 rounded-4 border border-secondary border-opacity-25 bg-dark shadow-lg"
+          >
+            <div class="row align-items-center text-center text-lg-start">
+              <div class="col-lg-8">
+                <h4 class="fw-bold mb-3">
+                  <i class="bi bi-award text-primary me-2"></i>¿Por qué elegir
+                  desarrollo a medida sobre WordPress?
+                </h4>
+                <p class="text-secondary mb-3">
+                  Las ofertas económicas de $150.000 dependen de plantillas
+                  lentas y plugins inseguros. Al trabajar con un
+                  <strong>Analista Programador Senior</strong> obtienes:
+                </p>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <p class="small mb-0">
+                      <i class="bi bi-lightning-charge text-warning me-2"></i
+                      ><strong>Más clientes:</strong> Una web rápida mejora la
+                      experiencia del usuario y aumenta las oportunidades de
+                      convertir visitas en clientes.
+                    </p>
+                  </div>
+                  <div class="col-md-6">
+                    <p class="small mb-0">
+                      <i class="bi bi-shield-check text-success me-2"></i
+                      ><strong>Mayor estabilidad:</strong> Desarrollo propio sin
+                      depender de plantillas ni plugins de terceros.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 text-center mt-4 mt-lg-0">
+                <p class="text-secondary small mb-3">
+                  No compres un problema técnico, invierte en una solución de
+                  ingeniería.
+                </p>
+                <a
+                  href="#contacto"
+                  class="btn btn-sm btn-outline-light rounded-pill"
+                  >Asesoría Gratuita</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Proyectos Section -->
+      <section id="proyectos" class="bg-body-secondary bg-opacity-10">
+        <div class="container">
+          <div class="text-center mb-5">
+            <h2 class="fw-bold display-6">Proyectos Destacados</h2>
+            <p class="text-secondary col-md-8 mx-auto">
+              Conoce cómo ayudamos a transformar la presencia digital y acelerar
+              las ventas de nuestros clientes.
+            </p>
+          </div>
+
+          <div class="row justify-content-center g-4">
+            <!-- Proyecto 1: Metrelex -->
+            <div class="col-12 col-md-6 col-lg-4">
+              <article class="card h-100 rounded-4 overflow-hidden shadow">
+                <div
+                  class="card-img-container p-3"
+                  style="
+                    background-color: #ffffff;
+                    height: 220px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                  "
+                >
+                  <img
+                    src="assets/img/logo-Metrelex.png"
+                    alt="Logo de Metrelex - Proyecto de sitio web corporativo"
+                    class="img-fluid"
+                    style="max-height: 100%; object-fit: contain"
+                  />
+                </div>
+
+                <!-- Parte Media (Contenido) -->
+                <div class="card-body p-4 d-flex flex-column text-center">
+                  <div class="mb-3">
+                    <span class="badge bg-primary px-3 py-2 rounded-pill"
+                      >Sitio Web Corporativo</span
+                    >
+                  </div>
+                  <h3 class="card-title h4 fw-bold text-white mb-3">
+                    Metrelex
+                  </h3>
+                  <p class="card-text text-white mb-4 flex-grow-1">
+                    Metrelex no tenía presencia web. Se creó un sitio
+                    profesional con botón de WhatsApp y formulario de contacto,
+                    permitiéndoles mostrar sus servicios y recibir consultas de
+                    nuevos clientes.
+                  </p>
+
+                  <!-- Parte Inferior (Footer de Card) -->
+                  <div class="mb-4">
+                    <small class="text-secondary fw-medium">
+                      <i class="bi bi-graph-up text-primary me-1"></i>
+                      Sitio optimizado para generar contactos desde internet
+                    </small>
+                  </div>
+                  <div class="mt-auto">
+                    <a
+                      href="https://metrelex.cl"
+                      class="btn btn-primary rounded-pill btn-hover-elevate px-4 w-100"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Ver Sitio <i class="bi bi-box-arrow-up-right ms-2"></i>
+                    </a>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonios Section -->
+      <section id="testimonios">
+        <div class="container">
+          <div class="text-center mb-5">
+            <h2 class="fw-bold display-6">Casos de Éxito</h2>
+            <p class="text-secondary col-md-8 mx-auto">
+              Lo que dicen nuestros clientes sobre el resultado de nuestro
+              trabajo.
+            </p>
+          </div>
+
+          <div class="row justify-content-center">
+            <div class="col-md-10 col-lg-8">
+              <!-- Estructura wrappper: lista para convertirse en carrusel en el futuro -->
+              <div class="testimonial-wrapper">
+                <article
+                  class="testimonial-card-gradient p-4 p-md-5 text-center shadow"
+                >
+                  <i
+                    class="bi bi-quote display-3 text-primary opacity-25 mb-2 d-inline-block"
+                  ></i>
+                  <p
+                    class="lead fst-italic mb-4 text-secondary lh-base px-md-3"
+                  >
+                    "Contratamos a José Ignacio para el desarrollo de nuestro
+                    sitio corporativo y el resultado superó las expectativas. La
+                    web es totalmente responsiva y se ve impecable en celulares,
+                    lo que era clave para nosotros. Además, la integración del
+                    botón de WhatsApp y el formulario de contacto seguro al
+                    correo de la empresa nos ha facilitado mucho la comunicación
+                    directa con nuevos clientes. Un trabajo técnico de gran
+                    nivel y muy confiable. Además, ahora recibimos consultas
+                    directamente desde la web, lo que antes no teníamos.
+                  </p>
+                  <div class="d-flex justify-content-center gap-1 mb-3">
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                  </div>
+                  <h3 class="h5 fw-bold mb-1 text-white">Alex Muñoz</h3>
+                  <p class="small text-primary mb-0 fw-medium">
+                    fundador de Metrelex
+                  </p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Servicios Section -->
+      <section id="servicios" class="py-5">
+        <div class="container">
+          <div class="text-center mb-5">
+            <h2 class="fw-bold display-6">Nuestros Servicios</h2>
+            <p class="text-secondary col-md-8 mx-auto">
+              Soluciones IT rentables, diseñadas para potenciar la eficiencia y
+              el crecimiento de tu empresa.
+            </p>
+          </div>
+
+          <div class="row g-4 justify-content-center">
+            <!-- Servicio 1 -->
+            <div class="col-md-6 col-lg-3">
+              <div
+                class="card h-100 p-4 rounded-4 text-center border-0 bg-body-tertiary"
+              >
+                <i class="bi bi-window-sidebar h1 text-primary mb-3"></i>
+                <h3 class="h5 fw-bold text-white">Sitios Corporativos</h3>
+                <p class="small text-secondary mb-0">
+                  Webs profesionales que generan confianza y presencia de marca
+                  inmediata.
+                </p>
+              </div>
+            </div>
+
+            <!-- Servicio 2 -->
+            <div class="col-md-6 col-lg-3">
+              <div
+                class="card h-100 p-4 rounded-4 text-center border-0 bg-body-tertiary"
+              >
+                <i class="bi bi-bullseye h1 text-primary mb-3"></i>
+                <h3 class="h5 fw-bold text-white">Landing Pages</h3>
+                <p class="small text-secondary mb-0">
+                  Páginas enfocadas 100% en captar clientes y cerrar ventas
+                  rápidamente.
+                </p>
+              </div>
+            </div>
+
+            <!-- Servicio 3 -->
+            <div class="col-md-6 col-lg-3">
+              <div
+                class="card h-100 p-4 rounded-4 text-center border-0 bg-body-tertiary"
+              >
+                <i class="bi bi-lightning-charge h1 text-primary mb-3"></i>
+                <h3 class="h5 fw-bold text-white">Optimización Web</h3>
+                <p class="small text-secondary mb-0">
+                  Mejora de velocidad y rendimiento para que Google te ponga en
+                  los primeros lugares.
+                </p>
+              </div>
+            </div>
+
+            <!-- Servicio 4 -->
+            <div class="col-md-6 col-lg-3">
+              <div
+                class="card h-100 p-4 rounded-4 text-center border-0 bg-body-tertiary"
+              >
+                <i class="bi bi-whatsapp h1 text-primary mb-3"></i>
+                <h3 class="h5 fw-bold text-white">Botón WhatsApp</h3>
+                <p class="small text-secondary mb-0">
+                  Integración directa para que tus clientes te hablen con un
+                  solo clic.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contacto Section -->
+      <section id="contacto">
+        <div class="container">
+          <div class="text-center mb-5">
+            <h2 class="fw-bold display-6">Contáctame</h2>
+            <p class="text-secondary col-md-8 mx-auto">
+              Solicita una asesoría sin compromiso para definir el mejor plan
+              para tu negocio.
+            </p>
+          </div>
+
+          <div class="row align-items-center justify-content-center g-5">
+            <div class="col-lg-8">
+              <div class="card p-4 p-md-5 rounded-4 border-0 shadow">
+                <form id="contact-form" class="needs-validation" novalidate>
+                  <div class="row g-3">
+                    <div class="col-12">
+                      <label for="name" class="form-label fw-medium"
+                        >Nombre Completo</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="name"
+                        name="name"
+                        required
+                        minlength="3"
+                        placeholder="Ej: José Ignacio Silva"
+                      />
+                      <div class="invalid-feedback">
+                        Por favor ingresa tu nombre completo.
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="email" class="form-label fw-medium"
+                        >Correo Electrónico</label
+                      >
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="email"
+                        name="email"
+                        placeholder="Ej: jose@gmail.com"
+                        required
+                      />
+                      <div class="invalid-feedback">
+                        Por favor ingresa un correo electrónico válido.
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="phone" class="form-label fw-medium"
+                        >Teléfono (Opcional)</label
+                      >
+                      <input
+                        type="tel"
+                        class="form-control"
+                        id="phone"
+                        name="phone"
+                        placeholder="Ej: 912345678"
+                        pattern="[0-9]{9}"
+                      />
+                      <div class="invalid-feedback">
+                        El teléfono debe tener 9 dígitos numéricos (Ej:
+                        912345678).
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <label for="message" class="form-label fw-medium"
+                        >Mensaje</label
+                      >
+                      <textarea
+                        class="form-control"
+                        id="message"
+                        name="message"
+                        rows="4"
+                        required
+                        minlength="10"
+                        placeholder="Cuéntame brevemente sobre tu negocio o proyecto..."
+                      ></textarea>
+                      <div class="invalid-feedback">
+                        Por favor ingresa tu mensaje (mínimo 10 caracteres).
+                      </div>
+                    </div>
+                    <div
+                      class="col-12 d-flex justify-content-center justify-content-lg-start mt-3"
+                    >
+                      <div
+                        class="g-recaptcha"
+                        data-sitekey="6LftzMEsAAAAAHFmt9xLk58UGHYgePA8yFIHUyT3"
+                        data-theme="dark"
+                      ></div>
+                    </div>
+                    <div class="col-12 mt-4 text-center text-lg-start">
+                      <button
+                        type="submit"
+                        class="btn btn-primary rounded-pill px-5 py-2 fw-medium btn-hover-elevate w-100"
+                        id="btn-submit"
+                      >
+                        Enviar Mensaje <i class="bi bi-send ms-2"></i>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+
+                <div
+                  id="form-message-sending"
+                  class="alert alert-info d-none mt-4 rounded-3 border-0"
+                  role="alert"
+                >
+                  <i class="bi bi-hourglass-split me-2"></i> Enviando...
+                </div>
+                <div
+                  id="form-message-success"
+                  class="alert d-none mt-4 rounded-3 border-0"
+                  style="
+                    background-color: rgba(16, 185, 129, 0.1);
+                    color: #10b981;
+                  "
+                  role="alert"
+                >
+                  <i class="bi bi-check-circle-fill me-2"></i> ¡Mensaje enviado
+                  exitosamente! Te contactaré a la brevedad.
+                </div>
+                <div
+                  id="form-message-error"
+                  class="alert alert-danger d-none mt-4 rounded-3 border-0"
+                  role="alert"
+                >
+                  <i class="bi bi-exclamation-triangle-fill me-2"></i> Ocurrió
+                  un error al enviar. Por favor intenta nuevamente o marca la
+                  casilla de seguridad.
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 text-center text-lg-start ps-lg-5">
+              <div class="mb-5">
+                <i
+                  class="bi bi-instagram text-primary"
+                  style="font-size: 2rem"
+                ></i>
+                <h3 class="h5 fw-bold mt-2">Instagram</h3>
+                <p class="text-secondary mb-0">
+                  Conoce más sobre mi trabajo en <br />
+                  <a
+                    href="https://www.instagram.com/joseignacio.devweb/"
+                    target="_blank"
+                    class="text-primary text-decoration-none fw-medium"
+                    >@joseignacio.devweb</a
+                  >
+                </p>
+              </div>
+              <div class="mb-4">
+                <i
+                  class="bi bi-linkedin text-primary"
+                  style="font-size: 2rem"
+                ></i>
+                <h3 class="h5 fw-bold mt-2">LinkedIn</h3>
+                <p class="text-secondary mb-0">
+                  También estoy disponible para conectar y charlar en <br />
+                  <a
+                    href="https://www.linkedin.com/in/jose-ignacio-silva-inestrosa/"
+                    target="_blank"
+                    class="text-primary text-decoration-none fw-medium"
+                    >mi perfil de LinkedIn</a
+                  >.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-body-secondary bg-opacity-25 py-5 border-top border-secondary border-opacity-10">
-        <div class="container text-center">
-            <h2 class="h3 fw-bold mb-4">Impulsa tu negocio con tecnología de alto nivel</h2>
-            <div class="d-flex justify-content-center gap-4 my-4">
-                <a href="https://www.linkedin.com/in/jose-ignacio-silva-inestrosa/" target="_blank"
-                    rel="noopener noreferrer" class="social-icon-link" aria-label="LinkedIn">
-                    <i class="bi bi-linkedin"></i>
-                </a>
-                <a href="https://www.instagram.com/joseignacio.devweb/" target="_blank" rel="noopener noreferrer"
-                    class="social-icon-link" aria-label="Instagram">
-                    <i class="bi bi-instagram"></i>
-                </a>
-            </div>
-            <div class="pt-4 mt-5 border-top border-secondary border-opacity-25">
-                <p class="text-secondary small mb-0">&copy; <span id="year"></span> José Ignacio - Desarrollador
-                    Web Full Stack Senior. Todos los derechos reservados.</p>
-            </div>
+    <footer
+      class="bg-body-secondary bg-opacity-25 py-5 border-top border-secondary border-opacity-10"
+    >
+      <div class="container text-center">
+        <h2 class="h3 fw-bold mb-4">
+          Impulsa tu negocio con tecnología de alto nivel
+        </h2>
+        <div class="d-flex justify-content-center gap-4 my-4">
+          <a
+            href="https://www.linkedin.com/in/jose-ignacio-silva-inestrosa/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-icon-link"
+            aria-label="LinkedIn"
+          >
+            <i class="bi bi-linkedin"></i>
+          </a>
+          <a
+            href="https://www.instagram.com/joseignacio.devweb/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-icon-link"
+            aria-label="Instagram"
+          >
+            <i class="bi bi-instagram"></i>
+          </a>
         </div>
+        <div class="pt-4 mt-5 border-top border-secondary border-opacity-25">
+          <p class="text-secondary small mb-0">
+            &copy; <span id="year"></span> José Ignacio - Desarrollador Web Full
+            Stack Senior. Todos los derechos reservados.
+          </p>
+        </div>
+      </div>
     </footer>
 
     <!-- Botón Flotante WhatsApp -->
-    <a href="https://wa.me/56974340975?text=Hola%20Jos%C3%A9%20Ignacio,%20vi%20tu%20portafolio.%0A%0ATengo%20un%20negocio%20y%20me%20interesa%20tener%20una%20p%C3%A1gina%20web%20para%20conseguir%20m%C3%A1s%20clientes.%0A%0A%C2%BFMe%20puedes%20orientar%20sobre%20qu%C3%A9%20tipo%20de%20web%20necesito%20y%20cu%C3%A1nto%20podr%C3%ADa%20costar%3F."
-        class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
-        <i class="bi bi-whatsapp"></i>
+    <a
+      href="https://wa.me/56974340975?text=Hola%20Jos%C3%A9%20Ignacio,%20vi%20tu%20portafolio.%0A%0ATengo%20un%20negocio%20y%20me%20interesa%20tener%20una%20p%C3%A1gina%20web%20para%20conseguir%20m%C3%A1s%20clientes.%0A%0A%C2%BFMe%20puedes%20orientar%20sobre%20qu%C3%A9%20tipo%20de%20web%20necesito%20y%20cu%C3%A1nto%20podr%C3%ADa%20costar%3F."
+      class="whatsapp-float"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Contactar por WhatsApp"
+    >
+      <i class="bi bi-whatsapp"></i>
     </a>
 
     <!-- Bootstrap 5 JS -->
@@ -589,6 +897,5 @@
 
     <!-- Custom JS -->
     <script type="module" src="./js/main.js"></script>
-</body>
-
+  </body>
 </html>
