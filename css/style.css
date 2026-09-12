@@ -305,3 +305,10 @@ footer p, footer span, footer a {
         padding-bottom: 4rem !important;
     }
 }
+
+/* Responsive border for pricing banner */
+@media (min-width: 768px) {
+    .border-end-md {
+        border-right: 1px solid rgba(255, 255, 255, 0.15) !important;
+    }
+}
