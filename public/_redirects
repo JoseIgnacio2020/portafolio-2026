@@ -1,0 +1,13 @@
+# =====================================================================
+# REDIRECCIONES NETLIFY — impulsoit.cl
+# =====================================================================
+
+# 1) El subdominio antiguo de Netlify seguía vivo (HTTP 200) con el mismo
+#    contenido => contenido duplicado en dos dominios. Con esta regla 301,
+#    todo el tráfico y la autoridad SEO del dominio viejo se transfiere
+#    al dominio canónico. (No afecta a los deploy previews: la regla solo
+#    aplica cuando el Host es exactamente jose-ignacio-dev.netlify.app)
+https://jose-ignacio-dev.netlify.app/*  https://impulsoit.cl/:splat  301
+
+# 2) Seguridad: nunca indexar rutas internas de Netlify
+/.netlify/*  404

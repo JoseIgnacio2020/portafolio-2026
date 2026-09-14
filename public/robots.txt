@@ -1,3 +1,9 @@
+# robots.txt — impulsoit.cl
+# Permite indexar todo el sitio público y bloquea rutas internas de Netlify.
+
 User-agent: *
 Allow: /
-Sitemap: https://jose-ignacio-dev.netlify.app/sitemap.xml
+Disallow: /.netlify/
+
+# Mapa del sitio canónico
+Sitemap: https://impulsoit.cl/sitemap.xml

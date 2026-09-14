@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es" data-bs-theme="dark">
+<html lang="es-CL" data-bs-theme="dark">
   <head>
     <!-- Google tag (gtag.js) -->
     <script
@@ -17,46 +17,89 @@
     </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ===== SEO PRIMARIO ===== -->
     <meta
       name="description"
-      content="Desarrollador Web Senior con 14 años de experiencia. Planes de diseño web profesional, landing pages y e-commerce a medida en Chile. Soluciones rápidas y seguras."
+      content="14 años de experiencia: páginas web para pymes desde $200.000 (pago único) y soporte técnico a domicilio en Santiago. Cotiza gratis por WhatsApp."
     />
     <meta
       name="keywords"
-      content="Desarrollo Web, Pymes, Chile, Landing Page, Sitio Corporativo, E-commerce"
+      content="diseño web Chile, páginas web para pymes, crear página web Santiago, soporte técnico a domicilio, soporte informático Las Condes, landing page, sitio corporativo, tienda online WooCommerce, desarrollador web full stack"
     />
     <meta name="author" content="José Ignacio Silva Inestrosa" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+    <meta name="theme-color" content="#0f172a" />
 
-    <!-- Open Graph Meta Tags -->
+    <!-- ===== OPEN GRAPH (WhatsApp, Facebook, LinkedIn) ===== -->
+    <meta property="og:site_name" content="Impulso IT" />
+    <meta property="og:locale" content="es_CL" />
     <meta
       property="og:title"
-      content="José Ignacio | Páginas Web Profesionales que Venden"
+      content="Diseño Web y Soporte Técnico a Domicilio en Santiago | Impulso IT"
     />
     <meta
       property="og:description"
-      content="Potencia tu negocio con sitios web a medida, rápidos y seguros. 14 años de experiencia senior transformando ideas en realidad digital."
+      content="14 años de experiencia: páginas web para pymes desde $200.000 (pago único) y soporte técnico a domicilio en Santiago. Cotiza gratis por WhatsApp."
     />
     <meta
       property="og:image"
-      content="https://jose-ignacio-dev.netlify.app/assets/img/og-image-v3.png?v=3"
+      content="https://impulsoit.cl/assets/img/og-image.png"
     />
-    <meta property="og:url" content="https://jose-ignacio-dev.netlify.app/" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Impulso IT: diseño web profesional y soporte técnico a domicilio en Santiago de Chile"
+    />
+    <meta property="og:url" content="https://impulsoit.cl/" />
     <meta property="og:type" content="website" />
 
+    <!-- ===== TWITTER / X CARD ===== -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Diseño Web y Soporte Técnico a Domicilio en Santiago | Impulso IT"
+    />
+    <meta
+      name="twitter:description"
+      content="14 años de experiencia: páginas web para pymes desde $200.000 (pago único) y soporte técnico a domicilio en Santiago."
+    />
+    <meta
+      name="twitter:image"
+      content="https://impulsoit.cl/assets/img/og-image.png"
+    />
+
+    <!--
+      Verificación de Google Search Console.
+      ⚠️ Este código corresponde a la propiedad ANTIGUA (dominio de Netlify).
+      Cuando crees la propiedad de impulsoit.cl en Search Console, reemplaza el
+      contenido por el código nuevo (o verifica por DNS TXT y elimina esta meta).
+      Ver paso 4.2 de GUIA-SEO-paso-a-paso.md
+    -->
     <meta
       name="google-site-verification"
       content="ZQnmp4qiqvyA4Fiem2WJfIac8R-_A2EpQ-AFoXT3-WU"
     />
 
-    <title>Planes de Desarrollo Web Profesional | José Ignacio</title>
+    <title>Diseño Web y Soporte Técnico a Domicilio en Santiago | Impulso IT</title>
 
-    <link rel="canonical" href="https://jose-ignacio-dev.netlify.app/" />
+    <link rel="canonical" href="https://impulsoit.cl/" />
 
-    <!-- Google Fonts: Inter -->
+    <!-- ===== FAVICON Y ICONOS DE APP ===== -->
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/img/favicon-32.png"
+    />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- Google Fonts: Inter (pesos reales usados por Bootstrap: 400-800) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
 
@@ -72,46 +115,123 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
 
-    <!-- Devicon Icons via CDN -->
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
-    />
-
     <!-- Custom CSS -->
     <link href="./css/style.css" rel="stylesheet" />
 
-    <!-- JSON-LD SEO Structured Data -->
+    <!-- JSON-LD SEO Structured Data (dominio canónico: impulsoit.cl) -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@graph": [
           {
+            "@type": "WebSite",
+            "@id": "https://impulsoit.cl/#website",
+            "url": "https://impulsoit.cl/",
+            "name": "Impulso IT",
+            "inLanguage": "es-CL",
+            "publisher": { "@id": "https://impulsoit.cl/#person" }
+          },
+          {
             "@type": "Person",
-            "@id": "https://jose-ignacio-dev.netlify.app/#person",
+            "@id": "https://impulsoit.cl/#person",
             "name": "José Ignacio Silva Inestrosa",
             "jobTitle": "Desarrollador Web Full Stack Senior",
-            "url": "https://jose-ignacio-dev.netlify.app/",
+            "url": "https://impulsoit.cl/",
             "address": {
               "@type": "PostalAddress",
               "addressLocality": "Santiago",
+              "addressRegion": "Región Metropolitana",
               "addressCountry": "CL"
             },
-            "knowsAbout": ["PHP", "Laravel", "MySQL", "JavaScript", "Angular"]
+            "sameAs": [
+              "https://www.linkedin.com/in/jose-ignacio-silva-inestrosa/",
+              "https://www.instagram.com/joseignacio.devweb/"
+            ],
+            "knowsAbout": [
+              "PHP",
+              "Laravel",
+              "CodeIgniter",
+              "Angular",
+              "JavaScript",
+              "MySQL",
+              "PostgreSQL",
+              "Docker",
+              "Seguridad web",
+              "SEO técnico",
+              "Desarrollo web para pymes"
+            ]
           },
           {
             "@type": "ProfessionalService",
-            "@id": "https://jose-ignacio-dev.netlify.app/#service",
-            "name": "Desarrollo Web Full Stack - José Ignacio Silva Inestrosa",
-            "provider": {
-              "@id": "https://jose-ignacio-dev.netlify.app/#person"
-            },
-            "url": "https://jose-ignacio-dev.netlify.app/",
+            "@id": "https://impulsoit.cl/#negocio",
+            "name": "Impulso IT",
+            "description": "Diseño de páginas web profesionales para pymes y soporte técnico informático a domicilio en Santiago de Chile. Profesional independiente con 14 años de experiencia.",
+            "url": "https://impulsoit.cl/",
+            "image": "https://impulsoit.cl/assets/img/og-image.png",
+            "logo": "https://impulsoit.cl/assets/img/og-image.png",
+            "priceRange": "$10.000 - $500.000 CLP",
+            "telephone": "+56974340975",
+            "founder": { "@id": "https://impulsoit.cl/#person" },
+            "provider": { "@id": "https://impulsoit.cl/#person" },
             "address": {
               "@type": "PostalAddress",
               "addressLocality": "Santiago",
+              "addressRegion": "Región Metropolitana",
               "addressCountry": "CL"
+            },
+            "areaServed": [
+              { "@type": "City", "name": "Las Condes" },
+              { "@type": "City", "name": "Providencia" },
+              { "@type": "City", "name": "Vitacura" },
+              { "@type": "City", "name": "Lo Barnechea" },
+              { "@type": "City", "name": "La Reina" },
+              { "@type": "City", "name": "Ñuñoa" }
+            ],
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Planes web y soporte técnico",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "price": "200000",
+                  "priceCurrency": "CLP",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Landing Page profesional (pago único)",
+                    "url": "https://impulsoit.cl/#planes"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "price": "400000",
+                  "priceCurrency": "CLP",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Sitio Web Corporativo hasta 5 páginas (pago único)",
+                    "url": "https://impulsoit.cl/#planes"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "price": "500000",
+                  "priceCurrency": "CLP",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Tienda E-commerce WooCommerce (pago único)",
+                    "url": "https://impulsoit.cl/#planes"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "price": "10000",
+                  "priceCurrency": "CLP",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Visita técnica + diagnóstico a domicilio en Las Condes",
+                    "url": "https://impulsoit.cl/#soporte-informatico"
+                  }
+                }
+              ]
             }
           }
         ]
@@ -134,8 +254,8 @@
         data-bs-theme="dark"
       >
         <div class="container">
-          <a class="navbar-brand fw-bold text-primary" href="#inicio"
-            >&lt;Dev/&gt;</a
+          <a class="navbar-brand fw-bold text-white" href="#inicio"
+            >Impulso<span class="text-primary">IT</span></a
           >
           <button
             class="navbar-toggler"
@@ -166,9 +286,6 @@
                 <a class="nav-link" href="#testimonios">Testimonios</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#servicios">Servicios</a>
-              </li>
-              <li class="nav-item">
                 <a class="nav-link" href="#soporte-informatico">Soporte</a>
               </li>
               <li class="nav-item">
@@ -184,39 +301,80 @@
       <!-- Hero Section -->
       <section id="inicio" class="hero-gradient position-relative">
         <div class="container">
-          <div class="row align-items-center min-vh-100">
+          <div class="row align-items-center min-vh-100 g-5">
             <div class="col-lg-6 text-center text-lg-start pt-5 pt-lg-0">
               <span
                 class="badge text-bg-primary bg-opacity-10 text-primary border border-primary mb-3 px-3 py-2 rounded-pill"
               >
-                14 Años de Experiencia Senior
+                <i class="bi bi-patch-check-fill me-1"></i> Profesional
+                independiente · 14 años de experiencia
               </span>
-              <h1 class="display-4 fw-bold mb-4 text-white">
-                Tu negocio merece una web que
-                <span class="text-primary">realmente venda</span>
+              <h1 class="display-5 fw-bold mb-3 text-white">
+                Diseño web profesional y
+                <span class="text-primary">soporte técnico a domicilio</span>
+                en Santiago
               </h1>
-              <p class="lead text-secondary mb-5">
-                Diseño sitios web a medida, ultrarrápidos y seguros. Sin
-                plantillas genéricas que limitan tu crecimiento.
+              <p class="lead text-secondary mb-4">
+                Páginas web a medida desde
+                <strong class="text-white">$200.000 (pago único)</strong> y
+                visitas técnicas desde
+                <strong class="text-white">$10.000</strong> en Las Condes y
+                Sector Oriente. Sitios rápidos, seguros y pensados para
+                conseguirte clientes.
               </p>
-              <div class="d-flex flex-column flex-sm-row gap-3">
+              <div class="d-flex flex-column flex-sm-row gap-3 mb-3">
                 <a
                   href="#planes"
                   class="btn btn-primary btn-lg px-4 rounded-pill"
-                  >Ver Planes Profesionales</a
-                >
+                  >Ver planes web <i class="bi bi-arrow-right ms-1"></i
+                ></a>
                 <a
-                  href="#contacto"
+                  href="#soporte-informatico"
                   class="btn btn-outline-light btn-lg px-4 rounded-pill"
-                  >Consultoría Gratuita</a
+                  ><i class="bi bi-tools me-1"></i> Soporte a domicilio</a
                 >
+              </div>
+              <a
+                href="https://wa.me/56974340975?text=Hola%20Jos%C3%A9%20Ignacio,%20vi%20tu%20sitio%20impulsoit.cl%20y%20quiero%20cotizar.%20%F0%9F%91%8B"
+                class="text-primary fw-semibold text-decoration-none"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="bi bi-whatsapp me-1"></i> ¿Prefieres escribirme ahora?
+                Hablemos por WhatsApp
+              </a>
+              <div
+                class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-2 mt-4"
+              >
+                <span
+                  class="badge rounded-pill border border-secondary border-opacity-25 bg-body-tertiary fw-normal small px-3 py-2 text-light"
+                >
+                  <i class="bi bi-check-circle-fill text-primary me-1"></i>Pago
+                  único, sin mensualidades
+                </span>
+                <span
+                  class="badge rounded-pill border border-secondary border-opacity-25 bg-body-tertiary fw-normal small px-3 py-2 text-light"
+                >
+                  <i class="bi bi-check-circle-fill text-primary me-1"></i
+                  >Código a medida, carga ultrarrápida
+                </span>
+                <span
+                  class="badge rounded-pill border border-secondary border-opacity-25 bg-body-tertiary fw-normal small px-3 py-2 text-light"
+                >
+                  <i class="bi bi-check-circle-fill text-primary me-1"></i>Trato
+                  directo, sin intermediarios
+                </span>
               </div>
             </div>
             <div class="col-lg-6 text-center d-none d-lg-block">
               <img
-                src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80"
-                alt="Desarrollo Web Senior"
+                src="/assets/img/hero-impulso-it.webp"
+                width="1000"
+                height="750"
+                alt="Espacio de trabajo de desarrollo web con un portátil mostrando un sitio web profesional con acentos verdes esmeralda"
                 class="img-fluid rounded-4 shadow-lg border border-secondary border-opacity-25"
+                fetchpriority="high"
+                decoding="async"
               />
             </div>
           </div>
@@ -596,89 +754,6 @@
         </div>
       </section>
 
-      <!-- Servicios Section -->
-      <section id="servicios" class="py-5">
-        <div class="container">
-          <div class="text-center mb-5">
-            <span class="badge text-bg-primary bg-opacity-10 text-primary border border-primary mb-3 px-3 py-2 rounded-pill">
-              Soluciones Integrales de Tecnología
-            </span>
-            <h2 class="fw-bold display-6">Nuestros Servicios</h2>
-            <p class="text-secondary col-md-8 mx-auto">
-              Soluciones web y soporte informático diseñados para potenciar la eficiencia, seguridad y ventas de tu negocio.
-            </p>
-          </div>
-
-          <div class="row g-4 justify-content-center">
-            <!-- Servicio 1: Landing Pages -->
-            <div class="col-md-6 col-lg-4">
-              <div class="card h-100 p-4 rounded-4 text-center border-0 bg-body-tertiary btn-hover-elevate">
-                <i class="bi bi-rocket-takeoff h1 text-primary mb-3"></i>
-                <h3 class="h5 fw-bold text-white">Landing Pages</h3>
-                <p class="small text-secondary mb-0">
-                  Páginas de alto impacto orientadas 100% a convertir visitas en clientes de forma rápida y directa.
-                </p>
-              </div>
-            </div>
-
-            <!-- Servicio 2: Sitios Corporativos -->
-            <div class="col-md-6 col-lg-4">
-              <div class="card h-100 p-4 rounded-4 text-center border-0 bg-body-tertiary btn-hover-elevate">
-                <i class="bi bi-building-gear h1 text-primary mb-3"></i>
-                <h3 class="h5 fw-bold text-white">Sitios Corporativos</h3>
-                <p class="small text-secondary mb-0">
-                  Estructuras multipágina a medida que transmiten la autoridad, solidez y confianza que tu empresa necesita.
-                </p>
-              </div>
-            </div>
-
-            <!-- Servicio 3: Tiendas E-commerce -->
-            <div class="col-md-6 col-lg-4">
-              <div class="card h-100 p-4 rounded-4 text-center border-0 bg-body-tertiary btn-hover-elevate">
-                <i class="bi bi-cart-check h1 text-primary mb-3"></i>
-                <h3 class="h5 fw-bold text-white">Tiendas E-commerce</h3>
-                <p class="small text-secondary mb-0">
-                  Venta online 24/7 autogestionable con pagos integrados en Chile (Mercado Pago, Flow) y sin comisiones.
-                </p>
-              </div>
-            </div>
-
-            <!-- Servicio 4: Optimización Web -->
-            <div class="col-md-6 col-lg-4">
-              <div class="card h-100 p-4 rounded-4 text-center border-0 bg-body-tertiary btn-hover-elevate">
-                <i class="bi bi-speedometer2 h1 text-primary mb-3"></i>
-                <h3 class="h5 fw-bold text-white">Optimización Web & SEO</h3>
-                <p class="small text-secondary mb-0">
-                  Aceleración de velocidad de carga, seguridad anti-hackeos y mejoras técnicas para destacar en Google.
-                </p>
-              </div>
-            </div>
-
-            <!-- Servicio 5: Soporte Informático Empresas -->
-            <div class="col-md-6 col-lg-4">
-              <div class="card h-100 p-4 rounded-4 text-center border-0 bg-body-tertiary btn-hover-elevate">
-                <i class="bi bi-pc-display-horizontal h1 text-primary mb-3"></i>
-                <h3 class="h5 fw-bold text-white">Soporte TI para Empresas</h3>
-                <p class="small text-secondary mb-0">
-                  Mantenimiento preventivo y correctivo de equipos, redes corporativas y respaldo de datos para Pymes.
-                </p>
-              </div>
-            </div>
-
-            <!-- Servicio 6: Soporte Informático -->
-            <div class="col-md-6 col-lg-4">
-              <div class="card h-100 p-4 rounded-4 text-center border-0 bg-body-tertiary btn-hover-elevate">
-                <i class="bi bi-tools h1 text-primary mb-3"></i>
-                <h3 class="h5 fw-bold text-white">Soporte informático para Pymes y a domicilio</h3>
-                <p class="small text-secondary mb-0">
-                  Diagnóstico de hardware y software, formateo e instalación de Windows y Linux, instalación de discos, memoria RAM entre otros servicios más.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <!-- Sección de Soporte Informático a Domicilio -->
       <section id="soporte-informatico" class="py-5 bg-body-secondary bg-opacity-10">
         <div class="container">
@@ -998,9 +1073,19 @@
           </a>
         </div>
         <div class="pt-4 mt-5 border-top border-secondary border-opacity-25">
-          <p class="text-secondary small mb-0">
-            &copy; <span id="year"></span> José Ignacio - Desarrollador Web Full
-            Stack Senior. Todos los derechos reservados.
+          <!--
+          Aviso de copyright: protege la OBRA (textos, diseño, código e
+          imágenes de este sitio). Nace automáticamente por ley (Ley 17.336 de
+          Chile y Convenio de Berna), sin necesidad de registro; el titular es
+          la persona natural. En este sitio NO se usan símbolos de marca
+          registrada ni de marca comercial: "Impulso IT" es únicamente el
+          nombre de fantasía, no registrado, del sitio
+          (ver GUIA-SEO-paso-a-paso.md, sección 7.4).
+        -->
+        <p class="text-secondary small mb-0">
+            &copy; <span id="year"></span> José Ignacio Silva Inestrosa ·
+            Impulso IT — Desarrollador Web Full Stack independiente · Santiago
+            de Chile.
           </p>
         </div>
       </div>
@@ -1025,5 +1110,5 @@
 
     <!-- Custom JS -->
     <script type="module" src="./js/main.js"></script>
-  </body>
+  <script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a3acea977fc9e9b8',t:'MTc4OTM2Mjk1Mg=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>

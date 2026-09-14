@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Sitemap canónico de impulsoit.cl -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://jose-ignacio-dev.netlify.app/</loc>
-    <lastmod>2026-04-07</lastmod>
+    <loc>https://impulsoit.cl/</loc>
+    <lastmod>2026-09-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>

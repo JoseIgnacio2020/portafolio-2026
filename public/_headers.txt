@@ -1,0 +1,22 @@
+# =====================================================================
+# CABECERAS HTTP — impulsoit.cl (seguridad + rendimiento/SEO)
+# =====================================================================
+
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+# Assets con hash de Vite (cambian de nombre en cada build => cache eterna)
+/assets/index-*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Vendor local (Bootstrap) — cambia muy poco
+/assets/vendor/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Imágenes de marca (OG, favicon, hero): cache de 1 día para poder
+# actualizarlas sin que queden pegadas en el navegador de los usuarios
+/assets/img/*
+  Cache-Control: public, max-age=86400
