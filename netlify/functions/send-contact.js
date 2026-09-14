@@ -1,11 +1,9 @@
 export async function handler(event) {
     try {
-        console.log("BODY:", event.body);
 
         const body = event.body ? JSON.parse(event.body) : {};
         const { token, name, email, phone, message } = body;
 
-        console.log("TOKEN:", token);
 
         // 🔐 reCAPTCHA
         const verifyRes = await fetch("https://www.google.com/recaptcha/api/siteverify", {
@@ -17,8 +15,6 @@ export async function handler(event) {
         });
 
         const verifyData = await verifyRes.json();
-        console.log("RECAPTCHA:", verifyData);
-
         if (!verifyData.success) {
             return {
                 statusCode: 400,
@@ -49,7 +45,6 @@ export async function handler(event) {
         });
 
         const emailText = await emailRes.text();
-        console.log("EMAILJS RESPONSE:", emailText);
 
         if (!emailRes.ok) {
             return {
