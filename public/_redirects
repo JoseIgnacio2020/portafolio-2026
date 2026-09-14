@@ -3,11 +3,16 @@
 # =====================================================================
 
 # 1) El subdominio antiguo de Netlify seguía vivo (HTTP 200) con el mismo
-#    contenido => contenido duplicado en dos dominios. Con esta regla 301,
-#    todo el tráfico y la autoridad SEO del dominio viejo se transfiere
-#    al dominio canónico. (No afecta a los deploy previews: la regla solo
-#    aplica cuando el Host es exactamente jose-ignacio-dev.netlify.app)
-https://jose-ignacio-dev.netlify.app/*  https://impulsoit.cl/:splat  301
+#    contenido => contenido duplicado en dos dominios. Con esta regla, todo
+#    el tráfico y la autoridad SEO del dominio viejo se transfiere al
+#    dominio canónico.
+#    ⚠️ El signo "!" (flag de fuerza) es OBLIGATORIO aquí: sin él, Netlify
+#    solo aplica la regla cuando la ruta pedida NO existe como archivo, y
+#    como "/" sí existe (index.html), la regla se ignoraba y el dominio
+#    viejo respondía 200. Con "301!" la redirección se fuerza siempre.
+#    (No afecta a los deploy previews: la regla solo aplica cuando el
+#    Host es exactamente jose-ignacio-dev.netlify.app)
+https://jose-ignacio-dev.netlify.app/*  https://impulsoit.cl/:splat  301!
 
-# 2) Seguridad: nunca indexar rutas internas de Netlify
+# 2) Seguridad: nunca exponer rutas internas de Netlify
 /.netlify/*  404
