@@ -1,30 +1,44 @@
 <!doctype html>
 <html lang="es-CL" data-bs-theme="dark">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-4HGFGS3HZF"
-    ></script>
+    <!-- Google Analytics 4 con Consent Mode v2.
+         Las cookies de medición quedan DENEGADAS por defecto y solo se
+         activan si el visitante acepta en el aviso de cookies que está al
+         final del <body>. Así GA no instala cookies sin consentimiento. -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);
       }
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        analytics_storage: "denied",
+        wait_for_update: 500,
+      });
+      try {
+        if (localStorage.getItem("impulsoit_consent") === "granted") {
+          gtag("consent", "update", { analytics_storage: "granted" });
+        }
+      } catch (e) {}
       gtag("js", new Date());
-
       gtag("config", "G-4HGFGS3HZF");
     </script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-4HGFGS3HZF"
+    ></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- ===== SEO PRIMARIO ===== -->
     <meta
       name="description"
-      content="14 años de experiencia: páginas web para pymes desde $200.000 (pago único) y soporte técnico a domicilio en Santiago. Cotiza gratis por WhatsApp."
+      content="Sitios web desde $200.000 para negocios y particulares: estáticos con pago único o autoadministrables con panel. Ciberseguridad y soporte a domicilio en Santiago."
     />
     <meta
       name="keywords"
-      content="diseño web Chile, páginas web para pymes, crear página web Santiago, soporte técnico a domicilio, soporte informático Las Condes, landing page, sitio corporativo, tienda online WooCommerce, desarrollador web full stack"
+      content="diseño web Chile, páginas web para pymes, páginas web para particulares, crear página web Santiago, sitio web autoadministrable, mantención WordPress, ciberseguridad, soporte técnico a domicilio, soporte informático Las Condes, landing page, sitio corporativo, tienda online WooCommerce, desarrollador web full stack"
     />
     <meta name="author" content="José Ignacio Silva Inestrosa" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
@@ -35,11 +49,11 @@
     <meta property="og:locale" content="es_CL" />
     <meta
       property="og:title"
-      content="Diseño Web y Soporte Técnico a Domicilio en Santiago | Impulso IT"
+      content="Diseño Web y Ciberseguridad en Santiago | Impulso IT"
     />
     <meta
       property="og:description"
-      content="14 años de experiencia: páginas web para pymes desde $200.000 (pago único) y soporte técnico a domicilio en Santiago. Cotiza gratis por WhatsApp."
+      content="Sitios web desde $200.000 para negocios y particulares, con conexión segura, y soporte técnico a domicilio en Santiago. 14 años de experiencia."
     />
     <meta
       property="og:image"
@@ -49,7 +63,7 @@
     <meta property="og:image:height" content="630" />
     <meta
       property="og:image:alt"
-      content="Impulso IT: diseño web profesional y soporte técnico a domicilio en Santiago de Chile"
+      content="Impulso IT: diseño web y ciberseguridad, más soporte técnico a domicilio en Santiago de Chile"
     />
     <meta property="og:url" content="https://impulsoit.cl/" />
     <meta property="og:type" content="website" />
@@ -58,11 +72,11 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
-      content="Diseño Web y Soporte Técnico a Domicilio en Santiago | Impulso IT"
+      content="Diseño Web y Ciberseguridad en Santiago | Impulso IT"
     />
     <meta
       name="twitter:description"
-      content="14 años de experiencia: páginas web para pymes desde $200.000 (pago único) y soporte técnico a domicilio en Santiago."
+      content="Sitios web desde $200.000 para negocios y particulares: estáticos con pago único o con panel de gestión. Soporte a domicilio en Santiago."
     />
     <meta
       name="twitter:image"
@@ -74,7 +88,7 @@
       content="ZQnmp4qiqvyA4Fiem2WJfIac8R-_A2EpQ-AFoXT3-WU"
     />
 
-    <title>Diseño Web y Soporte Técnico a Domicilio en Santiago | Impulso IT</title>
+    <title>Diseño Web y Ciberseguridad en Santiago | Impulso IT</title>
 
     <link rel="canonical" href="https://impulsoit.cl/" />
 
@@ -88,13 +102,9 @@
     />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
-    <!-- Google Fonts: Inter (pesos reales usados por Bootstrap: 400-800) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <!-- Tipografía Inter alojada en el mismo servidor del sitio (ver @font-face
+         en css/style.css). Un solo archivo de 48 KB cubre los pesos 100-900, así
+         que ya no se hace ninguna petición a Google para mostrar texto. -->
 
     <!-- Bootstrap 5 CSS (Local Vendor) -->
     <link
@@ -122,13 +132,16 @@
             "url": "https://impulsoit.cl/",
             "name": "Impulso IT",
             "inLanguage": "es-CL",
-            "publisher": { "@id": "https://impulsoit.cl/#person" }
+            "publisher": {
+              "@id": "https://impulsoit.cl/#person"
+            }
           },
           {
             "@type": "Person",
             "@id": "https://impulsoit.cl/#person",
             "name": "José Ignacio Silva Inestrosa",
-            "jobTitle": "Desarrollador Web Full Stack Senior",
+            "jobTitle": "Desarrollador Web Full Stack",
+            "description": "Profesional independiente con 14 años de experiencia en desarrollo web y soporte técnico informático.",
             "url": "https://impulsoit.cl/",
             "address": {
               "@type": "PostalAddress",
@@ -142,15 +155,18 @@
             ],
             "knowsAbout": [
               "PHP",
-              "Laravel",
               "CodeIgniter",
               "Angular",
               "JavaScript",
+              "Bootstrap",
+              "WordPress",
               "MySQL",
               "PostgreSQL",
               "Docker",
+              "Ciberseguridad",
               "Seguridad web",
               "SEO técnico",
+              "Protección de datos personales",
               "Desarrollo web para pymes"
             ]
           },
@@ -158,14 +174,28 @@
             "@type": "ProfessionalService",
             "@id": "https://impulsoit.cl/#negocio",
             "name": "Impulso IT",
-            "description": "Diseño de páginas web profesionales para pymes y soporte técnico informático a domicilio en Santiago de Chile. Profesional independiente con 14 años de experiencia.",
+            "description": "Desarrollo de sitios web y soporte técnico informático a domicilio en Santiago de Chile. Profesional independiente con 14 años de experiencia. Sitios estáticos con pago único y sitios autoadministrables con panel de gestión.",
             "url": "https://impulsoit.cl/",
             "image": "https://impulsoit.cl/assets/img/og-image.png",
             "logo": "https://impulsoit.cl/assets/img/og-image.png",
             "priceRange": "$10.000 - $500.000 CLP",
+            "currenciesAccepted": "CLP",
+            "paymentAccepted": "Transferencia bancaria, boleta de honorarios",
             "telephone": "+56974340975",
-            "founder": { "@id": "https://impulsoit.cl/#person" },
-            "provider": { "@id": "https://impulsoit.cl/#person" },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "customer service",
+              "telephone": "+56974340975",
+              "availableLanguage": [
+                "es"
+              ]
+            },
+            "founder": {
+              "@id": "https://impulsoit.cl/#person"
+            },
+            "provider": {
+              "@id": "https://impulsoit.cl/#person"
+            },
             "address": {
               "@type": "PostalAddress",
               "addressLocality": "Santiago",
@@ -173,13 +203,38 @@
               "addressCountry": "CL"
             },
             "areaServed": [
-              { "@type": "City", "name": "Las Condes" },
-              { "@type": "City", "name": "Providencia" },
-              { "@type": "City", "name": "Vitacura" },
-              { "@type": "City", "name": "Lo Barnechea" },
-              { "@type": "City", "name": "La Reina" },
-              { "@type": "City", "name": "Ñuñoa" },
-              { "@type": "City", "name": "Peñalolén" }
+              {
+                "@type": "City",
+                "name": "Santiago Centro"
+              },
+              {
+                "@type": "City",
+                "name": "Las Condes"
+              },
+              {
+                "@type": "City",
+                "name": "Providencia"
+              },
+              {
+                "@type": "City",
+                "name": "Vitacura"
+              },
+              {
+                "@type": "City",
+                "name": "Lo Barnechea"
+              },
+              {
+                "@type": "City",
+                "name": "La Reina"
+              },
+              {
+                "@type": "City",
+                "name": "Ñuñoa"
+              },
+              {
+                "@type": "City",
+                "name": "Peñalolén"
+              }
             ],
             "hasOfferCatalog": {
               "@type": "OfferCatalog",
@@ -187,46 +242,151 @@
               "itemListElement": [
                 {
                   "@type": "Offer",
+                  "url": "https://impulsoit.cl/#planes",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Landing Page estática (pago único)"
+                  },
                   "price": "200000",
-                  "priceCurrency": "CLP",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Landing Page profesional (pago único)",
-                    "url": "https://impulsoit.cl/#planes"
-                  }
+                  "priceCurrency": "CLP"
                 },
                 {
                   "@type": "Offer",
+                  "url": "https://impulsoit.cl/#planes",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Sitio web corporativo estático de hasta 5 páginas (pago único)"
+                  },
                   "price": "400000",
-                  "priceCurrency": "CLP",
+                  "priceCurrency": "CLP"
+                },
+                {
+                  "@type": "Offer",
+                  "url": "https://impulsoit.cl/#planes",
                   "itemOffered": {
                     "@type": "Service",
-                    "name": "Sitio Web Corporativo hasta 5 páginas (pago único)",
-                    "url": "https://impulsoit.cl/#planes"
+                    "name": "Tienda online autogestionable (WordPress + WooCommerce)"
+                  },
+                  "priceSpecification": {
+                    "@type": "UnitPriceSpecification",
+                    "priceCurrency": "CLP",
+                    "minPrice": "500000"
                   }
                 },
                 {
                   "@type": "Offer",
-                  "price": "500000",
-                  "priceCurrency": "CLP",
+                  "url": "https://impulsoit.cl/#soporte-informatico",
                   "itemOffered": {
                     "@type": "Service",
-                    "name": "Tienda E-commerce WooCommerce (pago único)",
-                    "url": "https://impulsoit.cl/#planes"
-                  }
-                },
-                {
-                  "@type": "Offer",
+                    "name": "Visita técnica + diagnóstico a domicilio en Las Condes"
+                  },
                   "price": "10000",
-                  "priceCurrency": "CLP",
+                  "priceCurrency": "CLP"
+                },
+                {
+                  "@type": "Offer",
+                  "url": "https://impulsoit.cl/#soporte-informatico",
                   "itemOffered": {
                     "@type": "Service",
-                    "name": "Visita técnica + diagnóstico a domicilio en Las Condes",
-                    "url": "https://impulsoit.cl/#soporte-informatico"
-                  }
+                    "name": "Visita técnica + diagnóstico a domicilio en otras comunas de Santiago"
+                  },
+                  "price": "15000",
+                  "priceCurrency": "CLP"
                 }
               ]
             }
+          },
+          {
+            "@type": "Service",
+            "@id": "https://impulsoit.cl/#servicio-estatico",
+            "name": "Desarrollo de sitios web estáticos",
+            "serviceType": "Diseño y desarrollo de sitios web estáticos con código a medida",
+            "description": "Sitios web construidos con HTML, CSS, Bootstrap y JavaScript: sin base de datos ni panel de administración, con pago único y sin mensualidad. Incluyen diseño responsivo, formulario de contacto protegido contra spam, conexión cifrada (HTTPS) y configuración SEO básica.",
+            "provider": {
+              "@id": "https://impulsoit.cl/#negocio"
+            },
+            "areaServed": {
+              "@type": "Country",
+              "name": "Chile"
+            },
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "CLP",
+              "price": "200000",
+              "url": "https://impulsoit.cl/#planes"
+            }
+          },
+          {
+            "@type": "Service",
+            "@id": "https://impulsoit.cl/#servicio-autoadministrable",
+            "name": "Desarrollo de sitios web autoadministrables",
+            "serviceType": "Diseño y desarrollo de sitios web con panel de administración (WordPress)",
+            "description": "Sitios web autoadministrables sobre WordPress, con panel de gestión para que el cliente publique y edite su propio contenido sin depender del desarrollador. Incluyen mantención técnica mensual: actualizaciones de seguridad, respaldo periódico y monitoreo del sitio. El valor se cotiza según el alcance de cada proyecto.",
+            "provider": {
+              "@id": "https://impulsoit.cl/#negocio"
+            },
+            "areaServed": {
+              "@type": "Country",
+              "name": "Chile"
+            },
+            "offers": {
+              "@type": "Offer",
+              "url": "https://impulsoit.cl/#planes"
+            }
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://impulsoit.cl/#faq",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "¿Cuál es la diferencia entre un sitio estático y uno autoadministrable?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Un sitio estático está hecho con código a medida (HTML, CSS, Bootstrap y JavaScript) y no tiene base de datos: se construye una vez, funciona igual durante años y no necesita mantención mensual. Un sitio autoadministrable funciona con WordPress e incluye un panel de administración donde tú mismo publicas y editas tus textos, fotos y servicios, sin depender de mí. A cambio, necesita mantención mensual, porque WordPress y sus complementos reciben actualizaciones de seguridad de forma constante."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Por qué los sitios estáticos no tienen mensualidad?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Porque no tienen base de datos, panel de administración ni complementos de terceros que actualizar: no hay nada que se deteriore solo. El sitio se entrega terminado y funciona. Lo único que se paga aparte es el dominio y el hosting, que se contratan a tu nombre y quedan bajo tu control."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Si mi sitio es autoadministrable, ¿por qué necesita mantención mensual?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Porque WordPress y sus complementos publican actualizaciones de seguridad constantemente. La mantención incluye aplicarlas, hacer respaldo del sitio y revisar que todo siga funcionando. Un sitio autoadministrable sin actualizar acumula vulnerabilidades conocidas: es la principal puerta de entrada de los ataques a páginas web."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Qué pasa si necesito un cambio después de que el sitio esté listo?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "En un sitio estático, los cambios se cotizan por actualización puntual: pagas solo cuando los necesitas, sin mensualidad. En un sitio autoadministrable, los cambios de contenido los haces tú desde el panel; si es un cambio de diseño, estructura o programación, se cotiza aparte de la mantención."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Cómo protegen los datos que envío en el formulario de contacto?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "El formulario se envía cifrado (HTTPS), pasa por una verificación anti-spam de Google (reCAPTCHA v2) y el mensaje llega directamente a mi correo electrónico mediante un servicio de envío de correo (EmailJS). Los mensajes no quedan guardados en una base de datos del sitio. El sitio también usa Google Analytics para medir visitas, y todos los detalles están en la Política de Privacidad."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Qué documentos y formas de pago manejas?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Para empresas emito boleta de honorarios; si eres persona natural, lo vemos al cotizar. En todos los casos las condiciones, los plazos y la forma de pago quedan por escrito antes de comenzar, así no hay sorpresas ni cobros automáticos."
+                }
+              }
+            ]
           }
         ]
       }
@@ -283,6 +443,9 @@
                 <a class="nav-link" href="#soporte-informatico">Soporte</a>
               </li>
               <li class="nav-item">
+                <a class="nav-link" href="#preguntas">Preguntas</a>
+              </li>
+              <li class="nav-item">
                 <a class="nav-link" href="#contacto">Contacto</a>
               </li>
             </ul>
@@ -309,12 +472,18 @@
                 en Santiago
               </h1>
               <p class="lead text-secondary mb-4">
-                Páginas web a medida desde
-                <strong class="text-white">$200.000</strong> y
+                Creo sitios web para negocios, emprendedores y particulares de dos formas:
+                <strong class="text-white">estáticos con código a medida</strong>
+                (pago único, sin mensualidades) y
+                <strong class="text-white">autoadministrables con panel de gestión</strong>
+                (tú publicas tu propio contenido, con mantención mensual).
+              </p>
+              <p class="text-secondary mb-4">
+                Sitios desde <strong class="text-white">$200.000</strong> y
                 visitas técnicas desde
-                <strong class="text-white">$10.000</strong> en Las Condes y
-                Sector Oriente. Sitios rápidos, seguros y pensados para
-                conseguirte clientes.
+                <strong class="text-white">$10.000</strong> en Las Condes, todo el
+                Sector Oriente y Santiago Centro. Rápidos, seguros y pensados
+                para conseguirte clientes.
               </p>
               <div class="d-flex flex-column flex-sm-row gap-3 mb-3">
                 <a
@@ -344,13 +513,13 @@
                   class="badge rounded-pill border border-secondary border-opacity-25 bg-body-tertiary fw-normal small px-3 py-2 text-light"
                 >
                   <i class="bi bi-check-circle-fill text-primary me-1"></i>Pago
-                  único, sin mensualidades
+                  único en sitios estáticos
                 </span>
                 <span
                   class="badge rounded-pill border border-secondary border-opacity-25 bg-body-tertiary fw-normal small px-3 py-2 text-light"
                 >
                   <i class="bi bi-check-circle-fill text-primary me-1"></i
-                  >Código a medida, carga ultrarrápida
+                  >Sitios con panel de administración
                 </span>
                 <span
                   class="badge rounded-pill border border-secondary border-opacity-25 bg-body-tertiary fw-normal small px-3 py-2 text-light"
@@ -376,7 +545,6 @@
       </section>
 
       <!-- Sección de Planes Profesionales -->
-      <!-- Sección de Planes Profesionales -->
       <section id="planes" class="py-5 bg-body-secondary bg-opacity-10">
         <div class="container">
           <!-- Encabezado de Sección -->
@@ -386,156 +554,286 @@
             </span>
             <h2 class="fw-bold display-6">Planes de Desarrollo Web Profesional</h2>
             <p class="text-secondary col-md-8 mx-auto fs-5">
-              Diseño enfocado en <strong>convertir visitas en clientes reales</strong>. Pago único, sin mensualidades obligatorias. Mantención opcional disponible.
+              Diseño enfocado en <strong>convertir visitas en clientes reales</strong>.
+              Trabajo con dos tipos de sitio, y la forma de pago cambia según el que necesites.
             </p>
           </div>
 
-          <!-- Tarjetas de Precios -->
-          <div class="row g-4 align-items-stretch justify-content-center">
-            
-            <!-- Plan 1: Landing Page -->
-            <div class="col-lg-4">
-              <div class="card h-100 p-4 rounded-4 border-0 shadow-sm btn-hover-elevate position-relative">
-                <div class="card-body d-flex flex-column">
-                  <div class="d-flex align-items-center justify-content-between mb-3">
-                    <span class="badge bg-secondary bg-opacity-25 text-light px-3 py-2 rounded-pill small">
-                      <i class="bi bi-lightning-charge-fill text-warning me-1"></i> Formato One-Page
-                    </span>
-                    <i class="bi bi-rocket-takeoff fs-2 text-primary"></i>
-                  </div>
+          <!-- Cómo elegir: estático vs autoadministrable -->
+          <div class="row g-4 justify-content-center mb-5" id="modalidades">
+            <div class="col-md-6 col-lg-5">
+              <div class="modalidad-card h-100 p-4 rounded-4">
+                <div class="d-flex align-items-center mb-3">
+                  <i class="bi bi-filetype-html fs-2 text-primary me-3"></i>
+                  <h3 class="h5 fw-bold mb-0">Sitio estático</h3>
+                </div>
+                <p class="small text-secondary mb-3">
+                  Código a medida: HTML, CSS, Bootstrap y JavaScript. Sin base de datos ni panel de administración.
+                </p>
+                <ul class="list-unstyled small mb-0">
+                  <li class="mb-2"><i class="bi bi-check-lg text-primary me-2"></i>Se construye una vez y queda funcionando</li>
+                  <li class="mb-2"><i class="bi bi-check-lg text-primary me-2"></i><strong>Pago único. Sin mensualidad.</strong></li>
+                  <li class="mb-2"><i class="bi bi-check-lg text-primary me-2"></i>Si necesitas cambios, se cotizan por actualización puntual</li>
+                  <li><i class="bi bi-check-lg text-primary me-2"></i>Ideal si tu información cambia poco</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-5">
+              <div class="modalidad-card modalidad-card--admin h-100 p-4 rounded-4">
+                <div class="d-flex align-items-center mb-3">
+                  <i class="bi bi-sliders fs-2 text-primary me-3"></i>
+                  <h3 class="h5 fw-bold mb-0">Sitio autoadministrable</h3>
+                </div>
+                <p class="small text-secondary mb-3">
+                  WordPress con panel de administración: tú publicas y editas tu contenido.
+                </p>
+                <ul class="list-unstyled small mb-0">
+                  <li class="mb-2"><i class="bi bi-check-lg text-primary me-2"></i>Panel de gestión: no dependes de mí para publicar</li>
+                  <li class="mb-2"><i class="bi bi-check-lg text-primary me-2"></i><strong>Pago único + mantención mensual</strong> (el valor se acuerda según el sitio)</li>
+                  <li class="mb-2"><i class="bi bi-check-lg text-primary me-2"></i>La mantención incluye actualizaciones, respaldo y monitoreo</li>
+                  <li><i class="bi bi-check-lg text-primary me-2"></i>Ideal si publicas seguido o vendes online</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-12 text-center mt-3">
+              <p class="small text-secondary mb-0">
+                <i class="bi bi-chat-dots text-primary me-1"></i>
+                ¿No sabes cuál de los dos te conviene? Escríbeme por WhatsApp y te lo digo sin costo.
+              </p>
+            </div>
+          </div>
 
-                  <h3 class="h4 fw-bold text-white mb-2">Landing Page</h3>
+          <!-- ===== GRUPO A: SITIOS ESTÁTICOS (pago único) ===== -->
+          <div class="plan-group mb-5">
+            <div class="plan-group-head mb-4">
+              <h3 class="h4 fw-bold mb-1">
+                <i class="bi bi-lightning-charge-fill text-warning me-2"></i>Sitios web estáticos
+              </h3>
+              <p class="text-secondary small mb-0">
+                Código a medida, sin base de datos. <strong>Pago único, sin mensualidades.</strong>
+              </p>
+            </div>
 
-                  <div class="my-3">
-                    <span class="h2 fw-bold text-white">$200.000</span>
-                    <p class="text-success small fw-semibold mt-1 mb-0">
-                      <i class="bi bi-check-circle-fill me-1"></i> Ideal para campañas en Google y Redes
+            <div class="row g-4 align-items-stretch justify-content-center">
+              <!-- Plan A1: Landing Page -->
+              <div class="col-md-6 col-xl-5">
+                <div class="card h-100 p-4 rounded-4 border-0 shadow-sm btn-hover-elevate position-relative">
+                  <div class="card-body d-flex flex-column">
+                    <div class="d-flex align-items-center justify-content-between mb-3">
+                      <span class="badge bg-secondary bg-opacity-25 text-light px-3 py-2 rounded-pill small">
+                        <i class="bi bi-lightning-charge-fill text-warning me-1"></i> Formato One-Page
+                      </span>
+                      <i class="bi bi-rocket-takeoff fs-2 text-primary"></i>
+                    </div>
+
+                    <h3 class="h4 fw-bold text-white mb-2">Landing Page</h3>
+
+                    <div class="my-3">
+                      <span class="h2 fw-bold text-white">$200.000</span>
+                      <p class="text-success small fw-semibold mt-1 mb-0">
+                        <i class="bi bi-check-circle-fill me-1"></i> Pago único · sin mantención
+                      </p>
+                    </div>
+
+                    <p class="text-secondary small mb-4">
+                      Diseñada minuciosamente como un <strong>embudo de ventas</strong>. Perfecta si promocionas un servicio específico y necesitas captar contactos de forma inmediata.
                     </p>
+
+                    <ul class="list-unstyled mb-4 flex-grow-1">
+                      <li class="mb-3 d-flex align-items-start">
+                        <i class="bi bi-check-lg text-primary fs-5 me-2 lh-1"></i>
+                        <span class="small text-light"><strong>Código puro a medida:</strong> Carga ultrarrápida en menos de 1 segundo.</span>
+                      </li>
+                      <li class="mb-3 d-flex align-items-start">
+                        <i class="bi bi-check-lg text-primary fs-5 me-2 lh-1"></i>
+                        <span class="small text-light"><strong>Estructura de Alta Conversión:</strong> Presentación clara de beneficios, testimonios y llamadas a la acción.</span>
+                      </li>
+                      <li class="mb-3 d-flex align-items-start">
+                        <i class="bi bi-check-lg text-primary fs-5 me-2 lh-1"></i>
+                        <span class="small text-light"><strong>Cierre Inmediato:</strong> Botón directo a WhatsApp y formulario express.</span>
+                      </li>
+                    </ul>
+
+                    <p class="plan-note small text-secondary mb-3">
+                      <i class="bi bi-info-circle me-1"></i>Sin mensualidad. Si más adelante necesitas cambios, se cotizan por actualización puntual.
+                    </p>
+
+                    <a href="#contacto" class="btn btn-outline-primary w-100 rounded-pill py-2 font-medium mt-auto">
+                      Solicitar Landing Page <i class="bi bi-arrow-right ms-1"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Plan A2: Sitio Corporativo (Destacado) -->
+              <div class="col-md-6 col-xl-5">
+                <div class="card h-100 p-4 rounded-4 border border-primary shadow position-relative card-featured">
+                  <div class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-primary px-3 py-2 fw-semibold shadow-sm">
+                    <i class="bi bi-star-fill me-1"></i> Más Solicitado
                   </div>
 
-                  <p class="text-secondary small mb-4">
-                    Diseñada minuciosamente como un <strong>embudo de ventas</strong>. Perfecta si promocionas un servicio específico y necesitas captar contactos de forma inmediata.
-                  </p>
+                  <div class="card-body d-flex flex-column mt-2">
+                    <div class="d-flex align-items-center justify-content-between mb-3">
+                      <span class="badge bg-primary bg-opacity-50 text-white border border-primary px-3 py-2 rounded-pill small">
+                        <i class="bi bi-layers-fill me-1"></i> Multipágina
+                      </span>
+                      <i class="bi bi-building-gear fs-2 text-primary"></i>
+                    </div>
 
-                  <ul class="list-unstyled mb-4 flex-grow-1">
-                    <li class="mb-3 d-flex align-items-start">
-                      <i class="bi bi-check-lg text-primary fs-5 me-2 lh-1"></i>
-                      <span class="small text-light"><strong>Código puro a medida:</strong> Carga ultrarrápida en menos de 1 segundo.</span>
-                    </li>
-                    <li class="mb-3 d-flex align-items-start">
-                      <i class="bi bi-check-lg text-primary fs-5 me-2 lh-1"></i>
-                      <span class="small text-light"><strong>Estructura de Alta Conversión:</strong> Presentación clara de beneficios, testimonios y llamadas a la acción.</span>
-                    </li>
-                    <li class="mb-3 d-flex align-items-start">
-                      <i class="bi bi-check-lg text-primary fs-5 me-2 lh-1"></i>
-                      <span class="small text-light"><strong>Cierre Inmediato:</strong> Botón directo a WhatsApp y formulario express.</span>
-                    </li>
-                  </ul>
+                    <h3 class="h4 fw-bold text-white mb-2">Sitio Corporativo</h3>
 
-                  <a href="#contacto" class="btn btn-outline-primary w-100 rounded-pill py-2 font-medium mt-auto">
-                    Solicitar Landing Page <i class="bi bi-arrow-right ms-1"></i>
-                  </a>
+                    <div class="my-3">
+                      <span class="h2 fw-bold text-white">$400.000</span>
+                      <p class="text-success small fw-semibold mt-1 mb-0">
+                        <i class="bi bi-shield-check me-1"></i> Proyecta máxima solidez y autoridad
+                      </p>
+                    </div>
+
+                    <p class="text-secondary small mb-4">
+                      Web institucional de hasta <strong>5 páginas navegables</strong> (Inicio, Servicios, Nosotros, Galería, Contacto). Transmite confianza a clientes corporativos.
+                    </p>
+
+                    <ul class="list-unstyled mb-4 flex-grow-1">
+                      <li class="mb-3 d-flex align-items-start">
+                        <i class="bi bi-check-lg text-primary fs-5 me-2 lh-1"></i>
+                        <span class="small text-light"><strong>Arquitectura Multipágina:</strong> Organiza la información de tu empresa sin saturar al usuario.</span>
+                      </li>
+                      <li class="mb-3 d-flex align-items-start">
+                        <i class="bi bi-check-lg text-primary fs-5 me-2 lh-1"></i>
+                        <span class="small text-light"><strong>SEO Posicionamiento Google:</strong> Optimización de velocidad y meta-etiquetas por cada sección.</span>
+                      </li>
+                      <li class="mb-3 d-flex align-items-start">
+                        <i class="bi bi-check-lg text-primary fs-5 me-2 lh-1"></i>
+                        <span class="small text-light"><strong>Sin gestores de contenido:</strong> al no usar WordPress ni complementos de terceros, no hay plugins que actualizar ni mantener.</span>
+                      </li>
+                    </ul>
+
+                    <p class="plan-note small text-secondary mb-3">
+                      <i class="bi bi-info-circle me-1"></i>Sin mensualidad. Si más adelante necesitas cambios, se cotizan por actualización puntual.
+                    </p>
+
+                    <a href="#contacto" class="btn btn-primary w-100 rounded-pill py-2 fw-bold mt-auto shadow-lg btn-hover-elevate">
+                      Quiero mi Sitio Corporativo <i class="bi bi-arrow-right ms-1"></i>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
+          </div>
 
-            <!-- Plan 2: Sitio Corporativo (Destacado UX) -->
-            <div class="col-lg-4">
-              <div class="card h-100 p-4 rounded-4 border border-primary shadow position-relative" style="background-color: rgba(16, 185, 129, 0.04); transform: scale(1.02); z-index: 2;">
-                <!-- Badge "Más Elegido" -->
-                <div class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-primary px-3 py-2 fw-semibold shadow-sm">
-                  <i class="bi bi-star-fill me-1"></i> Más Solicitado por Pymes
-                </div>
+          <!-- ===== GRUPO B: SITIOS AUTOADMINISTRABLES (pago único + mantención) ===== -->
+          <div class="plan-group">
+            <div class="plan-group-head plan-group-head--admin mb-4">
+              <h3 class="h4 fw-bold mb-1">
+                <i class="bi bi-sliders text-primary me-2"></i>Sitios web autoadministrables
+              </h3>
+              <p class="text-secondary small mb-0">
+                Con panel de administración para que subas tu propio contenido.
+                <strong>Pago único + mantención mensual.</strong>
+              </p>
+            </div>
 
-                <div class="card-body d-flex flex-column mt-2">
-                  <div class="d-flex align-items-center justify-content-between mb-3">
-                    <span class="badge bg-primary bg-opacity-50 text-white border border-primary px-3 py-2 rounded-pill small">
-                      <i class="bi bi-layers-fill me-1"></i> Multipágina
-                    </span>
-                    <i class="bi bi-building-gear fs-2 text-primary"></i>
-                  </div>
+            <div class="row g-4 align-items-stretch justify-content-center">
+              <!-- Plan B1: Sitio autoadministrable a medida -->
+              <div class="col-md-6 col-xl-5">
+                <div class="card h-100 p-4 rounded-4 border-0 shadow-sm btn-hover-elevate position-relative">
+                  <div class="card-body d-flex flex-column">
+                    <div class="d-flex align-items-center justify-content-between mb-3">
+                      <span class="badge bg-secondary bg-opacity-25 text-light px-3 py-2 rounded-pill small">
+                        <i class="bi bi-wordpress me-1"></i> WordPress
+                      </span>
+                      <i class="bi bi-sliders fs-2 text-primary"></i>
+                    </div>
 
-                  <h3 class="h4 fw-bold text-white mb-2">Sitio Corporativo</h3>
+                    <h3 class="h4 fw-bold text-white mb-2">Sitio Autoadministrable</h3>
 
-                  <div class="my-3">
-                    <span class="h2 fw-bold text-white">$400.000</span>
-                    <p class="text-success small fw-semibold mt-1 mb-0">
-                      <i class="bi bi-shield-check me-1"></i> Proyecta máxima solidez y autoridad
+                    <div class="my-3">
+                      <span class="h3 fw-bold text-white">Cotización según alcance</span>
+                      <p class="text-success small fw-semibold mt-1 mb-0">
+                        <i class="bi bi-arrow-repeat me-1"></i> Pago único + mantención mensual
+                      </p>
+                    </div>
+
+                    <p class="text-secondary small mb-4">
+                      Sitio con <strong>panel de administración</strong>: publica servicios, textos y fotos por tu cuenta, sin depender de nadie y sin pagar por cada cambio.
                     </p>
+
+                    <ul class="list-unstyled mb-4 flex-grow-1">
+                      <li class="mb-3 d-flex align-items-start">
+                        <i class="bi bi-check-lg text-primary fs-5 me-2 lh-1"></i>
+                        <span class="small text-light"><strong>Panel de Gestión:</strong> cambia precios, textos e imágenes cuando quieras.</span>
+                      </li>
+                      <li class="mb-3 d-flex align-items-start">
+                        <i class="bi bi-check-lg text-primary fs-5 me-2 lh-1"></i>
+                        <span class="small text-light"><strong>Diseño adaptado a tu marca:</strong> no es una plantilla genérica: adapto el diseño a tu identidad.</span>
+                      </li>
+                      <li class="mb-3 d-flex align-items-start">
+                        <i class="bi bi-check-lg text-primary fs-5 me-2 lh-1"></i>
+                        <span class="small text-light"><strong>Mantención técnica mensual:</strong> actualizaciones de seguridad, respaldo y monitoreo del sitio.</span>
+                      </li>
+                    </ul>
+
+                    <p class="plan-note small text-secondary mb-3">
+                      <i class="bi bi-info-circle me-1"></i>El valor depende de cuántas páginas y funciones necesites. Lo conversamos y te dejo el precio por escrito antes de empezar.
+                    </p>
+
+                    <a href="#contacto" class="btn btn-outline-primary w-100 rounded-pill py-2 font-medium mt-auto">
+                      Cotizar mi sitio autoadministrable <i class="bi bi-arrow-right ms-1"></i>
+                    </a>
                   </div>
+                </div>
+              </div>
 
-                  <p class="text-secondary small mb-4">
-                    Web institucional de hasta <strong>5 páginas navegables</strong> (Inicio, Servicios, Nosotros, Galería, Contacto). Transmite confianza a clientes corporativos.
-                  </p>
+              <!-- Plan B2: Tienda E-commerce -->
+              <div class="col-md-6 col-xl-5">
+                <div class="card h-100 p-4 rounded-4 border-0 shadow-sm btn-hover-elevate position-relative">
+                  <div class="card-body d-flex flex-column">
+                    <div class="d-flex align-items-center justify-content-between mb-3">
+                      <span class="badge bg-secondary bg-opacity-25 text-light px-3 py-2 rounded-pill small">
+                        <i class="bi bi-shop me-1"></i> WooCommerce
+                      </span>
+                      <i class="bi bi-cart-check-fill fs-2 text-primary"></i>
+                    </div>
 
-                  <ul class="list-unstyled mb-4 flex-grow-1">
-                    <li class="mb-3 d-flex align-items-start">
-                      <i class="bi bi-check-lg text-primary fs-5 me-2 lh-1"></i>
-                      <span class="small text-light"><strong>Arquitectura Multipágina:</strong> Organiza la información de tu empresa sin saturar al usuario.</span>
-                    </li>
-                    <li class="mb-3 d-flex align-items-start">
-                      <i class="bi bi-check-lg text-primary fs-5 me-2 lh-1"></i>
-                      <span class="small text-light"><strong>SEO Posicionamiento Google:</strong> Optimización de velocidad y meta-etiquetas por cada sección.</span>
-                    </li>
-                    <li class="mb-3 d-flex align-items-start">
-                      <i class="bi bi-check-lg text-primary fs-5 me-2 lh-1"></i>
-                      <span class="small text-light"><strong>Seguridad Avanzada:</strong> Código limpio anti-hackeos y libre de plugins vulnerables.</span>
-                    </li>
-                  </ul>
+                    <h3 class="h4 fw-bold text-white mb-2">Tienda E-commerce</h3>
 
-                  <a href="#contacto" class="btn btn-primary w-100 rounded-pill py-2 fw-bold mt-auto shadow-lg btn-hover-elevate">
-                    Quiero mi Sitio Corporativo <i class="bi bi-arrow-right ms-1"></i>
-                  </a>
+                    <div class="my-3">
+                      <span class="h2 fw-bold text-white">Desde $500.000</span>
+                      <p class="text-success small fw-semibold mt-1 mb-0">
+                        <i class="bi bi-arrow-repeat me-1"></i> Pago único + mantención mensual
+                      </p>
+                    </div>
+
+                    <p class="text-secondary small mb-4">
+                      Catálogo online autogestionable en <strong>WordPress + WooCommerce</strong>. Mantén el 100% del control de tus ventas sin pagar mensualidades a Shopify.
+                    </p>
+
+                    <ul class="list-unstyled mb-4 flex-grow-1">
+                      <li class="mb-3 d-flex align-items-start">
+                        <i class="bi bi-check-lg text-primary fs-5 me-2 lh-1"></i>
+                        <span class="small text-light"><strong>Pagos Automáticos en Chile:</strong> Integración con Mercado Pago, Flow o transferencias bancarias.</span>
+                      </li>
+                      <li class="mb-3 d-flex align-items-start">
+                        <i class="bi bi-check-lg text-primary fs-5 me-2 lh-1"></i>
+                        <span class="small text-light"><strong>Panel Autogestionable:</strong> Sube productos, cambia precios y administra inventario fácilmente.</span>
+                      </li>
+                      <li class="mb-3 d-flex align-items-start">
+                        <i class="bi bi-check-lg text-primary fs-5 me-2 lh-1"></i>
+                        <span class="small text-light"><strong>Promociones y Envíos:</strong> Configuración de cupones de descuento y métodos de despacho.</span>
+                      </li>
+                    </ul>
+
+                    <p class="plan-note small text-secondary mb-3">
+                      <i class="bi bi-info-circle me-1"></i>El precio final depende de la cantidad de productos y funciones. Te lo dejo por escrito antes de empezar.
+                    </p>
+
+                    <a href="#contacto" class="btn btn-outline-primary w-100 rounded-pill py-2 font-medium mt-auto">
+                      Cotizar mi tienda online <i class="bi bi-arrow-right ms-1"></i>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
-
-            <!-- Plan 3: E-commerce -->
-            <div class="col-lg-4">
-              <div class="card h-100 p-4 rounded-4 border-0 shadow-sm btn-hover-elevate position-relative">
-                <div class="card-body d-flex flex-column">
-                  <div class="d-flex align-items-center justify-content-between mb-3">
-                    <span class="badge bg-secondary bg-opacity-25 text-light px-3 py-2 rounded-pill small">
-                      <i class="bi bi-shop me-1"></i> WooCommerce
-                    </span>
-                    <i class="bi bi-cart-check-fill fs-2 text-primary"></i>
-                  </div>
-
-                  <h3 class="h4 fw-bold text-white mb-2">Tienda E-commerce</h3>
-
-                  <div class="my-3">
-                    <span class="h2 fw-bold text-white">$500.000</span>
-                    <p class="text-success small fw-semibold mt-1 mb-0">
-                      <i class="bi bi-currency-dollar me-1"></i> Tu tienda vendiendo 24/7 sin comisiones
-                    </p>
-                  </div>
-
-                  <p class="text-secondary small mb-4">
-                    Catálogo online autogestionable en <strong>WordPress + WooCommerce</strong>. Mantén el 100% del control de tus ventas sin pagar mensualidades a Shopify.
-                  </p>
-
-                  <ul class="list-unstyled mb-4 flex-grow-1">
-                    <li class="mb-3 d-flex align-items-start">
-                      <i class="bi bi-check-lg text-primary fs-5 me-2 lh-1"></i>
-                      <span class="small text-light"><strong>Pagos Automáticos en Chile:</strong> Integración con Mercado Pago, Flow o transferencias bancarias.</span>
-                    </li>
-                    <li class="mb-3 d-flex align-items-start">
-                      <i class="bi bi-check-lg text-primary fs-5 me-2 lh-1"></i>
-                      <span class="small text-light"><strong>Panel Autogestionable:</strong> Sube productos, cambia precios y administra inventario fácilmente.</span>
-                    </li>
-                    <li class="mb-3 d-flex align-items-start">
-                      <i class="bi bi-check-lg text-primary fs-5 me-2 lh-1"></i>
-                      <span class="small text-light"><strong>Promociones y Envíos:</strong> Configuración de cupones de descuento y métodos de despacho.</span>
-                    </li>
-                  </ul>
-
-                  <a href="#contacto" class="btn btn-outline-primary w-100 rounded-pill py-2 font-medium mt-auto">
-                    Solicitar Tienda Online <i class="bi bi-arrow-right ms-1"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-
           </div>
 
           <!-- Bloque UX: Incluido en TODOS los planes -->
@@ -558,15 +856,15 @@
               </div>
               <div class="col d-flex align-items-center">
                 <i class="bi bi-envelope-check-fill fs-4 text-primary me-3"></i>
-                <span class="small text-secondary"><strong class="text-light">Formulario Seguro:</strong> Notificaciones directas a tu correo.</span>
+                <span class="small text-secondary"><strong class="text-light">Formulario protegido:</strong> Verificación anti-spam y envío cifrado directo a tu correo.</span>
               </div>
               <div class="col d-flex align-items-center">
                 <i class="bi bi-geo-alt-fill fs-4 text-danger me-3"></i>
-                <span class="small text-secondary"><strong class="text-light">Google Maps y Redes:</strong> Integración de mapa e íconos sociales.</span>
+                <span class="small text-secondary"><strong class="text-light">Mapa y Redes:</strong> Integración de mapa e íconos sociales, si los necesitas.</span>
               </div>
               <div class="col d-flex align-items-center">
                 <i class="bi bi-google fs-4 text-primary me-3"></i>
-                <span class="small text-secondary"><strong class="text-light">Alta en Google:</strong> Asesoría para configurar Google Mi Negocio.</span>
+                <span class="small text-secondary"><strong class="text-light">Alta en Google:</strong> Configuración básica para que te encuentren en las búsquedas (Google Search Console).</span>
               </div>
             </div>
           </div>
@@ -576,7 +874,7 @@
             <div class="row align-items-center">
               <div class="col-lg-7 mb-4 mb-lg-0">
                 <span class="badge bg-danger bg-opacity-25 text-danger border border-danger mb-2 px-3 py-1 rounded-pill small">
-                  ⚠️ Atención Emprendedores
+                  ⚠️ Antes de contratar
                 </span>
                 <h3 class="h4 fw-bold text-white mb-3">
                   ¿Por qué una web de $50.000 te puede hacer perder clientes?
@@ -625,8 +923,8 @@
           <div class="text-center mb-5">
             <h2 class="fw-bold display-6">Proyectos Destacados</h2>
             <p class="text-secondary col-md-8 mx-auto">
-              Conoce cómo ayudamos a transformar la presencia digital y acelerar
-              las ventas de nuestros clientes.
+              Conoce cómo ayudé a transformar la presencia digital y a generar
+              contactos para mis clientes.
             </p>
           </div>
 
@@ -699,8 +997,7 @@
           <div class="text-center mb-5">
             <h2 class="fw-bold display-6">Casos de Éxito</h2>
             <p class="text-secondary col-md-8 mx-auto">
-              Lo que dicen nuestros clientes sobre el resultado de nuestro
-              trabajo.
+              Lo que dicen mis clientes sobre el resultado de mi trabajo.
             </p>
           </div>
 
@@ -745,12 +1042,136 @@
         </div>
       </section>
 
+      <!-- Preguntas Frecuentes -->
+      <section id="preguntas">
+        <div class="container">
+          <div class="text-center mb-5">
+            <span class="badge text-bg-primary bg-opacity-10 text-primary border border-primary mb-3 px-3 py-2 rounded-pill">
+              Antes de decidir
+            </span>
+            <h2 class="fw-bold display-6">Preguntas Frecuentes</h2>
+            <p class="text-secondary col-md-8 mx-auto">
+              Lo que más me preguntan antes de empezar un proyecto.
+            </p>
+          </div>
+
+          <div class="row justify-content-center">
+            <div class="col-lg-9">
+              <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                  <h3 class="accordion-header">
+                    <button
+                      class="accordion-button"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#faq1"
+                      aria-expanded="true"
+                      aria-controls="faq1"
+                    >
+                      ¿Cuál es la diferencia entre un sitio estático y uno autoadministrable?
+                    </button>
+                  </h3>
+                  <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body small">Un sitio estático está hecho con código a medida (HTML, CSS, Bootstrap y JavaScript) y no tiene base de datos: se construye una vez, funciona igual durante años y no necesita mantención mensual. Un sitio autoadministrable funciona con WordPress e incluye un panel de administración donde tú mismo publicas y editas tus textos, fotos y servicios, sin depender de mí. A cambio, necesita mantención mensual, porque WordPress y sus complementos reciben actualizaciones de seguridad de forma constante.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h3 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#faq2"
+                      aria-expanded="false"
+                      aria-controls="faq2"
+                    >
+                      ¿Por qué los sitios estáticos no tienen mensualidad?
+                    </button>
+                  </h3>
+                  <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body small">Porque no tienen base de datos, panel de administración ni complementos de terceros que actualizar: no hay nada que se deteriore solo. El sitio se entrega terminado y funciona. Lo único que se paga aparte es el dominio y el hosting, que se contratan a tu nombre y quedan bajo tu control.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h3 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#faq3"
+                      aria-expanded="false"
+                      aria-controls="faq3"
+                    >
+                      Si mi sitio es autoadministrable, ¿por qué necesita mantención mensual?
+                    </button>
+                  </h3>
+                  <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body small">Porque WordPress y sus complementos publican actualizaciones de seguridad constantemente. La mantención incluye aplicarlas, hacer respaldo del sitio y revisar que todo siga funcionando. Un sitio autoadministrable sin actualizar acumula vulnerabilidades conocidas: es la principal puerta de entrada de los ataques a páginas web.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h3 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#faq4"
+                      aria-expanded="false"
+                      aria-controls="faq4"
+                    >
+                      ¿Qué pasa si necesito un cambio después de que el sitio esté listo?
+                    </button>
+                  </h3>
+                  <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body small">En un sitio estático, los cambios se cotizan por actualización puntual: pagas solo cuando los necesitas, sin mensualidad. En un sitio autoadministrable, los cambios de contenido los haces tú desde el panel; si es un cambio de diseño, estructura o programación, se cotiza aparte de la mantención.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h3 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#faq5"
+                      aria-expanded="false"
+                      aria-controls="faq5"
+                    >
+                      ¿Cómo protegen los datos que envío en el formulario de contacto?
+                    </button>
+                  </h3>
+                  <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body small">El formulario se envía cifrado (HTTPS), pasa por una verificación anti-spam de Google (reCAPTCHA v2) y el mensaje llega directamente a mi correo electrónico mediante un servicio de envío de correo (EmailJS). Los mensajes no quedan guardados en una base de datos del sitio. El sitio también usa Google Analytics para medir visitas, y todos los detalles están en la Política de Privacidad.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h3 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#faq6"
+                      aria-expanded="false"
+                      aria-controls="faq6"
+                    >
+                      ¿Qué documentos y formas de pago manejas?
+                    </button>
+                  </h3>
+                  <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body small">Para empresas emito boleta de honorarios; si eres persona natural, lo vemos al cotizar. En todos los casos las condiciones, los plazos y la forma de pago quedan por escrito antes de comenzar, así no hay sorpresas ni cobros automáticos.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- Sección de Soporte Informático a Domicilio -->
       <section id="soporte-informatico" class="py-5 bg-body-secondary bg-opacity-10">
         <div class="container">
           <div class="text-center mb-5">
             <span class="badge text-bg-primary bg-opacity-10 text-primary border border-primary mb-3 px-3 py-2 rounded-pill">
-              Atención a Domicilio en Las Condes y Sector Oriente
+              Atención a Domicilio: Las Condes, todo el Sector Oriente y Santiago Centro
             </span>
             <h2 class="fw-bold display-6">Soporte Informático</h2>
             <p class="text-secondary col-md-8 mx-auto">
@@ -774,7 +1195,7 @@
             <div class="col-md-6 col-lg-4">
               <div class="card h-100 p-4 rounded-4 border-0 bg-body-tertiary shadow-sm btn-hover-elevate text-center">
                 <i class="bi bi-motherboard h1 text-primary mb-3"></i>
-                <h3 class="h5 fw-bold text-white">2. Hardware e Impresoras</h3>
+                <h3 class="h5 fw-bold text-white">2. Instalación y configuración de hardware</h3>
                 <p class="small text-secondary mb-0">
                   Instalación de discos SSD, memoria RAM y baterías. Configuración de impresoras con prueba de impresión.
                   Diagnóstico profundo de hardware para detectar fallas y prevenir problemas futuros.
@@ -838,13 +1259,14 @@
               <div class="col-md-4 mb-4 mb-md-0 border-end-md border-secondary border-opacity-25">
                 <h4 class="fw-bold text-white mb-2">Visita + Diagnóstico</h4>
                 <p class="text-primary display-6 fw-bold mb-1">$15.000</p>
-                <span class="badge bg-secondary text-light px-3 py-2 rounded-pill">Sector Oriente</span>
+                <span class="badge bg-secondary text-light px-3 py-2 rounded-pill">Otras comunas</span>
               </div>
               <div class="col-md-4 text-center mt-3 mt-md-0">
                 <i class="bi bi-shield-check display-4 text-primary mb-3 d-block"></i>
-                <h4 class="fw-bold text-white h5 mb-2">Precios Justos</h4>
+                <h4 class="fw-bold text-white h5 mb-2">Cobertura</h4>
                 <p class="small text-secondary mb-0">
-                  Sin sorpresas ni costos ocultos. Todo se acuerda de forma transparente antes de iniciar el trabajo.
+                  Atiendo en <strong>Las Condes, todo el Sector Oriente y Santiago
+                  Centro</strong>. Precios sin sorpresas: todo se acuerda antes de empezar.
                 </p>
               </div>
             </div>
@@ -943,6 +1365,30 @@
                       <div class="invalid-feedback">
                         Por favor ingresa tu mensaje (mínimo 10 caracteres).
                       </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-check consent-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value="aceptado"
+                          id="consent"
+                          name="consent"
+                          required
+                        />
+                        <label class="form-check-label small text-secondary" for="consent">
+                          He leído y acepto la
+                          <a href="politica-de-privacidad.html" target="_blank" rel="noopener" class="text-primary text-decoration-none">Política de Privacidad</a>.
+                          Autorizo el uso de mis datos únicamente para responder esta consulta.
+                        </label>
+                        <div class="invalid-feedback">
+                          Debes aceptar la Política de Privacidad para enviar el mensaje.
+                        </div>
+                      </div>
+                      <!-- Versión de la política vigente al momento del envío.
+                           Si agregas {{politica_version}} a tu plantilla de EmailJS,
+                           quedará registrada como evidencia del consentimiento. -->
+                      <input type="hidden" name="politica_version" value="v1.0 - 2026-10-08" />
                     </div>
                     <div
                       class="col-12 d-flex justify-content-center justify-content-lg-start mt-3"
@@ -1063,6 +1509,13 @@
             <i class="bi bi-instagram"></i>
           </a>
         </div>
+        <div class="d-flex flex-wrap justify-content-center gap-3 gap-md-4 small mt-4">
+          <a href="#planes" class="footer-link">Planes</a>
+          <a href="#preguntas" class="footer-link">Preguntas frecuentes</a>
+          <a href="#soporte-informatico" class="footer-link">Soporte técnico</a>
+          <a href="#contacto" class="footer-link">Contacto</a>
+          <a href="politica-de-privacidad.html" class="footer-link">Política de Privacidad</a>
+        </div>
         <div class="pt-4 mt-5 border-top border-secondary border-opacity-25">
           <!--
           Aviso de copyright: protege la OBRA (textos, diseño, código e
@@ -1093,6 +1546,44 @@
       <i class="bi bi-whatsapp"></i>
     </a>
 
+    <!-- ============================================================
+         AVISO DE COOKIES  ·  Impulso IT
+         Solo aparece si el visitante no ha elegido antes. Guarda la
+         elección en el navegador (localStorage) y se la comunica a
+         Google Analytics vía Consent Mode.
+         Si algún día quitas Google Analytics, borra también este bloque.
+         ============================================================ -->
+    <div id="consent-banner" class="consent-banner is-hidden" role="dialog" aria-live="polite" aria-label="Aviso de cookies">
+      <p class="small mb-3">
+        Uso Google Analytics para saber qué páginas se visitan y mejorar el sitio.
+        Son cookies de medición: no se usan para publicidad.
+        <a href="politica-de-privacidad.html" class="text-primary text-decoration-none">Más información</a>.
+      </p>
+      <div class="d-flex flex-wrap gap-2">
+        <button type="button" id="consent-accept" class="btn btn-primary btn-sm rounded-pill px-4">Aceptar</button>
+        <button type="button" id="consent-reject" class="btn btn-outline-light btn-sm rounded-pill px-4">Rechazar</button>
+      </div>
+    </div>
+    <script>
+      (function () {
+        var banner = document.getElementById("consent-banner");
+        var guardado = null;
+        try { guardado = localStorage.getItem("impulsoit_consent"); } catch (e) {}
+        if (guardado !== "granted" && guardado !== "denied") {
+          banner.classList.remove("is-hidden");
+        }
+        function decidir(valor) {
+          try { localStorage.setItem("impulsoit_consent", valor); } catch (e) {}
+          if (typeof gtag === "function") {
+            gtag("consent", "update", { analytics_storage: valor === "granted" ? "granted" : "denied" });
+          }
+          banner.classList.add("is-hidden");
+        }
+        document.getElementById("consent-accept").addEventListener("click", function () { decidir("granted"); });
+        document.getElementById("consent-reject").addEventListener("click", function () { decidir("denied"); });
+      })();
+    </script>
+
     <!-- Bootstrap 5 JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -1101,5 +1592,6 @@
 
     <!-- Custom JS -->
     <script type="module" src="./js/main.js"></script>
-  <script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a3acea977fc9e9b8',t:'MTc4OTM2Mjk1Mg=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+  <script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a3acea977fc9e9b8',t:'MTc4OTM2Mjk1Mg=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a478c1a25e3cb51c',t:'MTc5MTUwMDM3MA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4bc70e2c01a94c73b74392e4234840661791215815920" integrity="sha512-L0ha0OXavK/8okipN9F8BtP84dg9DUhPERbBXzwI6dgTA55d2+yweo3pn5CSFYs45/r8md2+xvUPtTdvTNRfjA==" data-cf-beacon='{"version":"2024.11.0","token":"1954b47c125f43f8b4338b3c4f804e4f","spa":2}' crossorigin="anonymous"></script>
+</body>
 </html>
