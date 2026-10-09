@@ -151,9 +151,6 @@ html {
     text-decoration: none;
 }
 
-.whatsapp-at-footer {
-    bottom: 100px;
-}
 
 .whatsapp-float:hover {
     transform: scale(1.1);
@@ -479,10 +476,30 @@ footer {
     }
 }
 
+/* Menú móvil: fondo sólido para que el texto de abajo no se mezcle con los enlaces */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        background-color: #0f172a;
+        border-radius: 0 0 1rem 1rem;
+        padding-bottom: 1rem;
+    }
+}
+
+/* Badges: Bootstrap los deja en una sola línea (nowrap). Un texto largo
+   ensanchaba toda la página en celular y corría la barra, el aviso de
+   cookies y el botón de WhatsApp fuera de la pantalla. Ahora pueden partir línea. */
+.badge {
+    white-space: normal;
+    max-width: 100%;
+}
+
+/* Red de seguridad: ninguna pieza puede ensanchar la página hacia la derecha */
+html, body {
+    overflow-x: clip;
+}
+
 /* La clase .whatsapp-at-footer ya no necesita subir el botón: el espacio
    libre del pie resuelve la superposición. Se deja declarada para que el
    JavaScript que la activa siga funcionando sin efectos raros.
    (Si quieres, puedes borrar el bloque 6 de main.js: ya no es necesario.) */
-.whatsapp-at-footer {
-    bottom: 40px;
-}
+/* (regla .whatsapp-at-footer eliminada: el botón mantiene su posición en todas las pantallas) */
