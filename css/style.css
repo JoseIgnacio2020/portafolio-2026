@@ -457,7 +457,9 @@ footer p, footer span, footer a {
    debajo del contenido. Con el pie "acolchado", el botón flota
    en una zona vacía y nunca tapa nada.
    ============================================================ */
-footer {
+/* Se usa footer.py-5 (y no solo footer): Bootstrap pone py-5 con !important y
+   gana por especificidad; sin esto el relleno inferior nunca se aplicaba. */
+footer.py-5 {
     padding-bottom: 7rem !important;
 }
 
@@ -471,8 +473,8 @@ footer {
         bottom: 24px;
         right: 24px;
     }
-    footer {
-        padding-bottom: 8rem !important;
+    footer.py-5 {
+        padding-bottom: 9rem !important;
     }
 }
 
