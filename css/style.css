@@ -1,3 +1,17 @@
+/* ============================================================
+   TIPOGRAFÍA INTER — alojada en el propio sitio (sin Google Fonts).
+   Es un solo archivo de fuente variable: 48 KB que cubren todos
+   los pesos de 100 a 900. Antes eran 3 peticiones a Google.
+   Ruta: /assets/fonts/inter-latin-var.woff2
+   ============================================================ */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url('/assets/fonts/inter-latin-var.woff2') format('woff2');
+}
+
 :root {
     /* Emerald Accents */
     --bs-primary: #10b981; 
@@ -311,4 +325,164 @@ footer p, footer span, footer a {
     .border-end-md {
         border-right: 1px solid rgba(255, 255, 255, 0.15) !important;
     }
+}
+
+/* ============================================================
+   AGREGADOS — dos modalidades de sitio, preguntas frecuentes,
+   formulario con consentimiento y aviso de cookies.
+   (Todo lo anterior se mantiene sin cambios.)
+   ============================================================ */
+
+/* Bloque comparativo "Sitio estático / Sitio autoadministrable" */
+.modalidad-card {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+}
+.modalidad-card--admin {
+    border-color: rgba(16, 185, 129, 0.55);
+}
+.modalidad-card ul li {
+    color: #f8fafc;
+    line-height: 1.5;
+}
+
+/* Encabezado de cada grupo de planes */
+.plan-group-head {
+    border-left: 3px solid var(--bs-primary);
+    padding-left: 1rem;
+}
+.plan-group-head--admin {
+    border-left-color: #38bdf8;
+}
+
+/* Tarjeta del plan destacado (antes era un style en línea) */
+.card-featured {
+    background-color: rgba(16, 185, 129, 0.04);
+    transform: scale(1.02);
+    z-index: 2;
+}
+@media (max-width: 1199.98px) {
+    .card-featured {
+        transform: none;
+    }
+}
+
+/* Nota al pie de cada plan */
+.plan-note {
+    line-height: 1.5;
+    border-top: 1px dashed rgba(255, 255, 255, 0.12);
+    padding-top: 0.75rem;
+}
+
+/* Acordeón de preguntas frecuentes (tema oscuro) */
+.accordion {
+    --bs-accordion-bg: #1e293b;
+    --bs-accordion-color: #f8fafc;
+    --bs-accordion-border-color: #334155;
+    --bs-accordion-btn-color: #ffffff;
+    --bs-accordion-btn-bg: #1e293b;
+    --bs-accordion-active-color: #10b981;
+    --bs-accordion-active-bg: rgba(16, 185, 129, 0.12);
+    --bs-accordion-btn-focus-box-shadow: 0 0 0 0.2rem rgba(16, 185, 129, 0.25);
+    --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23f8fafc'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2310b981'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    border-radius: 1rem;
+    overflow: hidden;
+}
+.accordion-button {
+    font-weight: 600;
+}
+.accordion-body {
+    color: #f8fafc;
+    line-height: 1.6;
+}
+
+/* Casilla de consentimiento del formulario */
+.consent-check {
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid #2d3643;
+    border-radius: 0.75rem;
+    padding: 0.85rem 0.85rem 0.85rem 2.5rem;
+}
+.consent-check .form-check-input {
+    background-color: #131a22;
+    border-color: #475569;
+    margin-left: -1.5rem;
+}
+.consent-check .form-check-input:checked {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+.consent-check .form-check-input:focus {
+    box-shadow: 0 0 0 0.2rem rgba(16, 185, 129, 0.25);
+}
+
+/* Aviso de cookies */
+.consent-banner {
+    position: fixed;
+    left: 1rem;
+    right: 1rem;
+    bottom: 6rem;
+    z-index: 1080;
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+    padding: 1rem 1.25rem;
+}
+.consent-banner.is-hidden {
+    display: none;
+}
+@media (min-width: 992px) {
+    .consent-banner {
+        left: 1.5rem;
+        right: auto;
+        bottom: 1.5rem;
+        max-width: 480px;
+    }
+}
+
+/* Enlaces del pie de página */
+.footer-link {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.footer-link:hover {
+    color: var(--bs-primary);
+}
+
+/* ============================================================
+   BOTÓN DE WHATSAPP Y PIE DE PÁGINA
+   Antes el botón flotante quedaba encima del texto del pie.
+   La solución NO es subir el botón (eso lo empujaría sobre las
+   redes sociales del pie, más arriba), sino dejar espacio libre
+   debajo del contenido. Con el pie "acolchado", el botón flota
+   en una zona vacía y nunca tapa nada.
+   ============================================================ */
+footer {
+    padding-bottom: 7rem !important;
+}
+
+@media (max-width: 767.98px) {
+    /* En celular el botón se achica un poco y el pie necesita más aire,
+       porque el texto del pie se centra y ocupa todo el ancho. */
+    .whatsapp-float {
+        width: 54px;
+        height: 54px;
+        font-size: 26px;
+        bottom: 24px;
+        right: 24px;
+    }
+    footer {
+        padding-bottom: 8rem !important;
+    }
+}
+
+/* La clase .whatsapp-at-footer ya no necesita subir el botón: el espacio
+   libre del pie resuelve la superposición. Se deja declarada para que el
+   JavaScript que la activa siga funcionando sin efectos raros.
+   (Si quieres, puedes borrar el bloque 6 de main.js: ya no es necesario.) */
+.whatsapp-at-footer {
+    bottom: 40px;
 }

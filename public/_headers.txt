@@ -1,22 +1,23 @@
-# =====================================================================
-# CABECERAS HTTP — impulsoit.cl (seguridad + rendimiento/SEO)
-# =====================================================================
+# ============================================================
+# Netlify · Cabeceras HTTP personalizadas
+# Este archivo debe quedar en la RAÍZ de la carpeta publicada
+# (en Vite, dentro de "public/", para que termine en "dist/").
+# ============================================================
 
+# Tipografía: nunca cambia, se puede cachear para siempre
+/assets/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Imágenes (incluida og-image.png): 7 días, para poder reemplazarlas
+/assets/img/*
+  Cache-Control: public, max-age=604800
+
+# Hojas de estilo
+/css/*.css
+  Cache-Control: public, max-age=604800
+
+# Cabeceras de seguridad para todo el sitio
 /*
   X-Content-Type-Options: nosniff
-  X-Frame-Options: SAMEORIGIN
   Referrer-Policy: strict-origin-when-cross-origin
-  Permissions-Policy: camera=(), microphone=(), geolocation=()
-
-# Assets con hash de Vite (cambian de nombre en cada build => cache eterna)
-/assets/index-*
-  Cache-Control: public, max-age=31536000, immutable
-
-# Vendor local (Bootstrap) — cambia muy poco
-/assets/vendor/*
-  Cache-Control: public, max-age=31536000, immutable
-
-# Imágenes de marca (OG, favicon, hero): cache de 1 día para poder
-# actualizarlas sin que queden pegadas en el navegador de los usuarios
-/assets/img/*
-  Cache-Control: public, max-age=86400
+  Permissions-Policy: geolocation=(), microphone=(), camera=()
